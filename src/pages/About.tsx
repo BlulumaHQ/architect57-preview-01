@@ -1,17 +1,19 @@
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Leaf, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import aboutHero from "@/assets/about-hero.jpg";
+import projectImg6 from "@/assets/project-6.jpg";
 
 const About = () => (
   <Layout>
     {/* Hero */}
-    <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-section-light">
+    <section className="pt-36 pb-20 md:pt-44 md:pb-28">
       <div className="container-site">
         <ScrollReveal>
-          <span className="text-primary text-sm font-semibold tracking-widest uppercase">About Us</span>
-          <h1 className="mt-3 text-balance">About Architect 57</h1>
-          <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
+          <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">About</span>
+          <h1 className="mt-4 text-balance">Architect 57 Inc.</h1>
+          <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
             Specializing in integrated building design since our founding, we bring expertise, sustainability, and community-focused values to every project.
           </p>
         </ScrollReveal>
@@ -19,23 +21,24 @@ const About = () => (
     </section>
 
     {/* Story */}
-    <section className="section-padding bg-background">
+    <section className="pb-24 md:pb-32">
       <div className="container-site">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <ScrollReveal direction="left">
             <img
-              src="https://static.wixstatic.com/media/c77437_4601df6848d54b219a808518d7bc496d~mv2.jpg/v1/fit/w_960,h_541,q_90,enc_auto/c77437_4601df6848d54b219a808518d7bc496d~mv2.jpg"
-              alt="Architect 57 project"
-              className="rounded-sm w-full aspect-[4/3] object-cover"
+              src={aboutHero}
+              alt="Architectural detail"
+              className="w-full aspect-[3/4] object-cover"
               loading="lazy"
             />
           </ScrollReveal>
           <ScrollReveal direction="right">
-            <h2>Our Story</h2>
-            <p className="text-muted-foreground mt-4">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Our Story</span>
+            <h2 className="mt-4 mb-8">Integrated design, intentional craft</h2>
+            <p className="text-muted-foreground text-[15px] font-light leading-[1.8] mb-6">
               Architect 57 Inc. specializes in integrated building design, complex building code consultation, specialized industrial, research and technology, mix-use, commercial, residential, industrial, institutional, sustainable architecture, project planning, and many more.
             </p>
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted-foreground text-[15px] font-light leading-[1.8]">
               We believe that it is our responsibility making this world a better and healthier place for living. This commitment drives every decision we make, from material selection to energy systems design.
             </p>
           </ScrollReveal>
@@ -44,27 +47,24 @@ const About = () => (
     </section>
 
     {/* Values */}
-    <section className="section-padding bg-section-light">
+    <section className="py-24 md:py-32 bg-section-light">
       <div className="container-site">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-primary text-sm font-semibold tracking-widest uppercase">What Drives Us</span>
-            <h2 className="mt-3">Our Values</h2>
+          <div className="mb-20">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Values</span>
+            <h2 className="mt-4">What Drives Us</h2>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-12">
           {[
-            { icon: Award, title: "Excellence", desc: "Proud finalist of the Canadian Home Builder's Association Sam Awards (now CHBA National Awards for Housing Excellence), reflecting our commitment to quality." },
-            { icon: Leaf, title: "Sustainability", desc: "Principal Ching-yeh (Cary) Tsai devoted energy towards the formation of the U.S. Green Building Council — Las Vegas Regional Chapter as part of giving back to the community." },
-            { icon: Users, title: "Community", desc: "We help build a better, healthier, and sustainable living environment through thoughtful design and integrated delivery." },
+            { title: "Excellence", desc: "Proud finalist of the Canadian Home Builder's Association Sam Awards (now CHBA National Awards for Housing Excellence), reflecting our commitment to quality." },
+            { title: "Sustainability", desc: "Principal Ching-yeh (Cary) Tsai devoted energy towards the formation of the U.S. Green Building Council — Las Vegas Regional Chapter as part of giving back to the community." },
+            { title: "Community", desc: "We help build a better, healthier, and sustainable living environment through thoughtful design and integrated delivery." },
           ].map((v, i) => (
             <ScrollReveal key={v.title} delay={i * 100}>
-              <div className="p-8 bg-background rounded-sm border border-border">
-                <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center mb-5">
-                  <v.icon className="text-primary" size={24} />
-                </div>
-                <h3 className="text-xl mb-3">{v.title}</h3>
-                <p className="text-muted-foreground text-sm">{v.desc}</p>
+              <div className="border-t border-border pt-8">
+                <h3 className="text-lg font-normal mb-4">{v.title}</h3>
+                <p className="text-muted-foreground text-[15px] font-light leading-[1.8]">{v.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -72,19 +72,29 @@ const About = () => (
       </div>
     </section>
 
+    {/* Image break */}
+    <section className="py-0">
+      <img
+        src={projectImg6}
+        alt="Sustainable architecture"
+        className="w-full h-[50vh] md:h-[60vh] object-cover"
+        loading="lazy"
+      />
+    </section>
+
     {/* CTA */}
-    <section className="section-padding bg-primary">
+    <section className="py-32 md:py-44">
       <div className="container-site text-center">
         <ScrollReveal>
-          <h2 className="text-primary-foreground text-balance">Ready to Start Your Project?</h2>
-          <p className="text-primary-foreground/70 mt-4 max-w-xl mx-auto">
+          <h2 className="text-balance max-w-2xl mx-auto">Ready to start your project?</h2>
+          <p className="text-muted-foreground mt-6 max-w-lg mx-auto text-[15px] font-light">
             Let's discuss how our integrated design approach can bring your vision to life.
           </p>
           <Link
             to="/contact"
-            className="bg-secondary text-secondary-foreground px-8 py-4 font-semibold rounded-sm hover:brightness-110 transition inline-flex items-center gap-2 mt-8 active:scale-[0.97]"
+            className="inline-flex items-center gap-3 text-[13px] tracking-[0.12em] uppercase font-normal border border-foreground/20 px-8 py-3.5 mt-10 hover:bg-foreground hover:text-background transition-all duration-300 active:scale-[0.97]"
           >
-            Get in Touch <ArrowRight size={18} />
+            Get in Touch <ArrowRight size={16} />
           </Link>
         </ScrollReveal>
       </div>

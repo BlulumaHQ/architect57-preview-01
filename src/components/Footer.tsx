@@ -4,17 +4,16 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background/80">
-      <div className="container-site section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6">
-          {/* Column 1: Logo & Description */}
+    <footer className="bg-foreground text-background/70">
+      <div className="container-site py-24 md:py-32">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-6">
+          {/* Column 1: Wordmark & Description */}
           <div className="md:col-span-1">
-            <div className="font-heading font-bold text-xl text-background mb-4">
+            <div className="text-lg tracking-[0.15em] uppercase font-light text-background mb-5">
               Architect 57
-              <span className="text-xs block font-medium tracking-wider uppercase text-background/50">Inc.</span>
             </div>
-            <p className="text-sm leading-relaxed text-background/60">
-              Integrated building design, code consultation, and project management serving Richmond, BC.
+            <p className="text-sm leading-relaxed text-background/40 font-light">
+              Integrated building design, code consultation, and sustainable architecture serving Richmond, BC.
             </p>
           </div>
 
@@ -23,49 +22,49 @@ const Footer = () => {
 
           {/* Column 3: Navigation */}
           <div>
-            <h4 className="text-background font-semibold text-sm uppercase tracking-wider mb-4">Navigation</h4>
-            <nav className="flex flex-col gap-2.5">
-              <Link to="/" className="text-sm text-background/60 hover:text-secondary transition-colors">Home</Link>
-              <Link to="/projects" className="text-sm text-background/60 hover:text-secondary transition-colors">Projects</Link>
-              <Link to="/about" className="text-sm text-background/60 hover:text-secondary transition-colors">About</Link>
-              <Link to="/contact" className="text-sm text-background/60 hover:text-secondary transition-colors">Contact Us</Link>
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Navigate</h4>
+            <nav className="flex flex-col gap-3">
+              <Link to="/" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Home</Link>
+              <Link to="/projects" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Projects</Link>
+              <Link to="/about" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">About</Link>
+              <Link to="/contact" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Contact</Link>
             </nav>
           </div>
 
           {/* Column 4: Services */}
           <div>
-            <h4 className="text-background font-semibold text-sm uppercase tracking-wider mb-4">Services</h4>
-            <nav className="flex flex-col gap-2.5">
-              <span className="text-sm text-background/60">Integrated Building Design</span>
-              <span className="text-sm text-background/60">Code Consultation</span>
-              <span className="text-sm text-background/60">Project Management</span>
-              <span className="text-sm text-background/60">BIM Services</span>
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Services</h4>
+            <nav className="flex flex-col gap-3">
+              <span className="text-sm text-background/50 font-light">Building Design</span>
+              <span className="text-sm text-background/50 font-light">Code Consultation</span>
+              <span className="text-sm text-background/50 font-light">Project Management</span>
+              <span className="text-sm text-background/50 font-light">BIM Services</span>
             </nav>
           </div>
 
           {/* Column 5: Contact */}
           <div>
-            <h4 className="text-background font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
-            <div className="flex flex-col gap-2.5 text-sm text-background/60">
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Contact</h4>
+            <div className="flex flex-col gap-3 text-sm text-background/50 font-light">
               <span>203-2680 Shell Road</span>
               <span>Richmond, BC V6X 4C9</span>
-              <a href="tel:604-818-2088" className="hover:text-secondary transition-colors">604-818-2088</a>
-              <a href="mailto:cary@architect57.com" className="hover:text-secondary transition-colors">cary@architect57.com</a>
+              <a href="tel:604-818-2088" className="hover:text-background transition-colors duration-300">604-818-2088</a>
+              <a href="mailto:cary@architect57.com" className="hover:text-background transition-colors duration-300">cary@architect57.com</a>
             </div>
           </div>
         </div>
       </div>
 
       {/* Copyright bar */}
-      <div className="border-t border-background/10">
-        <div className="container-site py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-background/40 text-center md:text-left">
+      <div className="border-t border-background/8">
+        <div className="container-site py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] text-background/30 text-center md:text-left font-light">
             © {year} Architect 57 Inc. All rights reserved. | Web Design by{" "}
             <a
               href="https://bluluma.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-secondary transition-colors"
+              className="hover:text-background/60 transition-colors duration-300"
             >
               Bluluma
             </a>
