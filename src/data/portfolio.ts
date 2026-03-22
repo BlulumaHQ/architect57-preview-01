@@ -146,8 +146,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Richmond, BC",
     description:
       "A significant commercial office development in Richmond's Bridgeport district, designed to accommodate modern workplace needs within a refined architectural envelope. The building's massing responds to the urban context while maximizing efficient floor plates and natural light penetration across all levels.",
-    heroImage: srcProject7,
-    images: [srcProject7, srcProject8, srcProject9],
+    heroImage: bridgeportOffice01,
+    images: [bridgeportOffice01, bridgeportOffice02, bridgeportOffice03],
     details: [
       { label: "Category", value: "Commercial & Industrial" },
       { label: "Location", value: "Richmond, BC" },
