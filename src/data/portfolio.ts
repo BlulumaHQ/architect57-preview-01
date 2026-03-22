@@ -275,19 +275,19 @@ export const collections: Collection[] = [
         meta: "15 units (5 types)",
       },
       {
-        image: srcProject11,
+        image: royalOak01,
         title: "Royal Oak",
         location: "Burnaby, BC",
         meta: "12,627 sq. ft. · Budget: $5.45 million",
       },
       {
-        image: srcProject12,
+        image: west3901,
         title: "West 39 Avenue",
         location: "Vancouver, BC",
         meta: "4,438 sq. ft. · Budget: $1.78 million",
       },
       {
-        image: srcProject6,
+        image: seavale01,
         title: "Seavale",
         location: "Richmond, BC",
         meta: "4,658 sq. ft. · Budget: $1.39 million",
