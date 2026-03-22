@@ -417,7 +417,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "2,415 sq. ft.",
     budget: "$1 million",
-    image: torakeJapaneseCuisine01,
+    image: sushiKiwami01,
   },
   {
     slug: "torake-japanese-cuisine",
