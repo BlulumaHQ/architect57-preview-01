@@ -464,7 +464,7 @@ export const allProjects: ProjectItem[] = [
     budget: "$6M+",
     detail: "CBD oil processing ready",
     image: brightwaySeafood01,
-    images: [brightwaySeafood01],
+    images: [brightwaySeafood01, brightwaySeafood02, brightwaySeafood03],
   },
   {
     slug: "atlas-power-technologies",
