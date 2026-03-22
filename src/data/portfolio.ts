@@ -10,6 +10,7 @@ import phiEducation01 from "@/assets/phi-education-01.webp";
 import sqnEducation01 from "@/assets/sqn-education-01.webp";
 import torakeJapaneseCuisine01 from "@/assets/torake-japanese-cuisine-01.webp";
 import bridgeportHotel01 from "@/assets/bridgeport-hotel-01.webp";
+import bridgeportHotel03 from "@/assets/bridgeport-hotel-03.webp";
 import ramenOneBroadway01 from "@/assets/ramen-one-broadway-01.webp";
 import sushiKiwami01 from "@/assets/sushi-kiwami-01.webp";
 import applianceCanada01 from "@/assets/appliance_canada-01.webp";
@@ -46,6 +47,9 @@ import okanaganChateauRetirement01 from "@/assets/okanagan_chateau_retirement-01
 import siennaRideauRetirement01 from "@/assets/sienna_rideau_retirement-01.webp";
 
 import chenResidence01 from "@/assets/chen-residence-01.webp";
+import chenResidence02 from "@/assets/chen-residence-02.webp";
+import chenResidence03 from "@/assets/chen-residence-03.webp";
+import chenResidence04 from "@/assets/chen-residence-04.webp";
 import hanResidence01 from "@/assets/han-residence-01.webp";
 import severnResidence01 from "@/assets/severn-residence-01.webp";
 import xuResidence01 from "@/assets/xu-residence-01.webp";
@@ -71,6 +75,8 @@ import hazcoEnvironmentalWaste01 from "@/assets/hazco_environmental_waste-01.web
 
 import atlasPowerTechnologies01 from "@/assets/atlas_power_technologies-01.webp";
 import brightwaySeafood01 from "@/assets/brightway_cfia_seafood-01.webp";
+import brightwaySeafood02 from "@/assets/brightway_cfia_seafood-02.webp";
+import brightwaySeafood03 from "@/assets/brightway_cfia_seafood-03.webp";
 import corvusEnergyExpansion01 from "@/assets/corvus_energy_expansion-01.webp";
 import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
@@ -180,7 +186,7 @@ export const allProjects: ProjectItem[] = [
     area: "6,729 sq. ft.",
     detail: "CHBA National SAM Awards Finalist",
     image: chenResidence01,
-    images: [chenResidence01],
+    images: [chenResidence01, chenResidence02, chenResidence03, chenResidence04],
   },
   {
     slug: "han-residence",
@@ -415,7 +421,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     detail: "Design architect: GBL Architects",
     image: bridgeportHotel01,
-    images: [bridgeportHotel01, bridgeportHotel02],
+    images: [bridgeportHotel01, bridgeportHotel02, bridgeportHotel03],
   },
 
   // ── INDUSTRIAL ───────────────────────────────────────
@@ -458,7 +464,7 @@ export const allProjects: ProjectItem[] = [
     budget: "$6M+",
     detail: "CBD oil processing ready",
     image: brightwaySeafood01,
-    images: [brightwaySeafood01],
+    images: [brightwaySeafood01, brightwaySeafood02, brightwaySeafood03],
   },
   {
     slug: "atlas-power-technologies",
