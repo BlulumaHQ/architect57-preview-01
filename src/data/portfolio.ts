@@ -736,7 +736,7 @@ export const allProjects: ProjectItem[] = [
     location: "Surrey, BC",
     detail: "Designer: Yan Design Studio",
     image: morganPlay01,
-    images: [morganPlay01],
+    images: [morganPlay01, morganPlay02, morganPlay03],
   },
   {
     slug: "ace-e-sports",
