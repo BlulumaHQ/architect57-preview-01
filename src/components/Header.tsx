@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/architect-57-logo.svg";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { label: "Projects", path: "/projects" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { label: t("nav.projects"), path: "/projects" },
+    { label: t("nav.about"), path: "/about" },
+    { label: t("nav.contact"), path: "/contact" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -35,7 +37,7 @@ const Header = () => {
     >
       <div className="container-site flex items-center justify-between h-20 md:h-24">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Architect 57" className="h-[40px] max-h-[40px] w-auto" />
+          <img src={logo} alt="Architect 57 無極建築" className="h-[40px] max-h-[40px] w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -52,11 +54,33 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
+
+          {/* Language Toggle */}
+          <div className="flex items-center gap-0 text-[12px] tracking-[0.08em] font-normal">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-2 py-1 transition-colors duration-300 ${
+                language === "en" ? "text-foreground" : "text-foreground/35 hover:text-foreground/60"
+              }`}
+            >
+              EN
+            </button>
+            <span className="text-foreground/20">|</span>
+            <button
+              onClick={() => setLanguage("zh")}
+              className={`px-2 py-1 transition-colors duration-300 ${
+                language === "zh" ? "text-foreground" : "text-foreground/35 hover:text-foreground/60"
+              }`}
+            >
+              繁中
+            </button>
+          </div>
+
           <Link
             to="/contact"
             className="text-[13px] tracking-[0.12em] uppercase font-normal border border-foreground/20 px-6 py-2.5 hover:bg-foreground hover:text-background transition-all duration-300 active:scale-[0.97]"
           >
-            Inquire
+            {t("nav.inquire")}
           </Link>
         </nav>
 
@@ -78,7 +102,7 @@ const Header = () => {
                 location.pathname === "/" ? "text-foreground" : "text-foreground/50"
               }`}
             >
-              Home
+              {t("nav.home")}
             </Link>
             {navItems.map((item) => (
               <Link
@@ -91,6 +115,26 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
+            {/* Mobile Language Toggle */}
+            <div className="flex items-center gap-0 text-[12px] tracking-[0.08em] font-normal pt-2 border-t border-border">
+              <button
+                onClick={() => setLanguage("en")}
+                className={`px-2 py-1 transition-colors duration-300 ${
+                  language === "en" ? "text-foreground" : "text-foreground/35"
+                }`}
+              >
+                EN
+              </button>
+              <span className="text-foreground/20">|</span>
+              <button
+                onClick={() => setLanguage("zh")}
+                className={`px-2 py-1 transition-colors duration-300 ${
+                  language === "zh" ? "text-foreground" : "text-foreground/35"
+                }`}
+              >
+                繁中
+              </button>
+            </div>
           </nav>
         </div>
       )}

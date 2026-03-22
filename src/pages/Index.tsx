@@ -6,19 +6,21 @@ import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
 import { getRandomFeaturedProjects } from "@/data/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const heroSlides = [heroImage1, heroImage2];
-
-const services = [
-  { title: "Integrated Design", desc: "Full-spectrum building design spanning commercial, residential, and institutional typologies." },
-  { title: "Code Consultation", desc: "Complex building code consultation with CP-certified professionals ensuring full compliance." },
-  { title: "BIM Services", desc: "Advanced building information modelling for precise visualization and project coordination." },
-  { title: "Project Management", desc: "End-to-end integrated project delivery from planning through construction completion." },
-];
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const featuredProjects = useMemo(() => getRandomFeaturedProjects(4), []);
+  const { t } = useLanguage();
+
+  const services = [
+    { title: t("home.services.integrated.title"), desc: t("home.services.integrated.desc") },
+    { title: t("home.services.code.title"), desc: t("home.services.code.desc") },
+    { title: t("home.services.bim.title"), desc: t("home.services.bim.desc") },
+    { title: t("home.services.pm.title"), desc: t("home.services.pm.desc") },
+  ];
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -48,17 +50,17 @@ const Index = () => {
           <div className="container-site">
             <div className="max-w-2xl">
               <h1 className="animate-fade-in-up text-white text-balance font-light">
-                Architecture shaped by light, material, and intention
+                {t("home.hero.title")}
               </h1>
               <p className="animate-fade-in-up delay-200 text-white/60 text-lg md:text-xl mt-8 max-w-lg font-light">
-                Integrated project delivery, code consultation, BIM, and sustainable design — serving Richmond, BC and beyond.
+                {t("home.hero.subtitle")}
               </p>
               <div className="animate-fade-in-up delay-300 mt-10">
                 <Link
                   to="/projects"
                   className="inline-flex items-center gap-3 text-[13px] tracking-[0.12em] uppercase font-normal text-white border border-white/30 px-8 py-3.5 hover:bg-white hover:text-black transition-all duration-300 active:scale-[0.97]"
                 >
-                  View Projects <ArrowRight size={16} />
+                  {t("home.hero.cta")} <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -72,10 +74,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="flex items-start gap-4 mb-6">
               <span className="hidden md:block w-8 h-px bg-[#a11d2d]/40 mt-[1.1em] shrink-0" />
-              <span className="text-[11px] tracking-[0.2em] uppercase text-[#a11d2d]/60 font-normal">Est. Richmond, BC</span>
+              <span className="text-[11px] tracking-[0.2em] uppercase text-[#a11d2d]/60 font-normal">{t("home.intro.label")}</span>
             </div>
             <p className="text-2xl md:text-[2.5rem] lg:text-[3rem] leading-[1.2] font-light max-w-5xl text-balance" style={{ letterSpacing: "-0.02em" }}>
-              Architect 57 Inc. specializes in integrated building design, complex building code consultation, sustainable architecture, and project planning — creating spaces that serve people and place.
+              {t("home.intro.text")}
             </p>
           </ScrollReveal>
         </div>
@@ -86,8 +88,8 @@ const Index = () => {
         <div className="container-site">
           <ScrollReveal>
             <div className="mb-20">
-              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Services</span>
-              <h2 className="mt-4 text-balance">What We Do</h2>
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">{t("home.services.label")}</span>
+              <h2 className="mt-4 text-balance">{t("home.services.title")}</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14">
@@ -109,8 +111,8 @@ const Index = () => {
         <div className="container-site">
           <ScrollReveal>
             <div className="mb-20">
-              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Selected Work</span>
-              <h2 className="mt-4 text-balance">Projects</h2>
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">{t("home.portfolio.label")}</span>
+              <h2 className="mt-4 text-balance">{t("home.portfolio.title")}</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -138,7 +140,7 @@ const Index = () => {
                 to="/projects"
                 className="inline-flex items-center gap-3 text-[13px] tracking-[0.12em] uppercase font-normal border border-foreground/20 px-8 py-3.5 hover:bg-foreground hover:text-background transition-all duration-300 active:scale-[0.97]"
               >
-                All Projects <ArrowRight size={16} />
+                {t("home.portfolio.cta")} <ArrowRight size={16} />
               </Link>
             </div>
           </ScrollReveal>
@@ -150,21 +152,21 @@ const Index = () => {
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <ScrollReveal direction="left">
-              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Philosophy</span>
-              <h2 className="mt-4 mb-8">Design for a better world</h2>
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">{t("home.philosophy.label")}</span>
+              <h2 className="mt-4 mb-8">{t("home.philosophy.title")}</h2>
               <p className="text-muted-foreground text-[15px] font-light leading-[1.8] mb-6">
-                We believe that it is our responsibility making this world a better and healthier place for living. Every project begins with a commitment to the community and environment it will inhabit.
+                {t("home.philosophy.p1")}
               </p>
               <p className="text-muted-foreground text-[15px] font-light leading-[1.8]">
-                Proud finalist of the Canadian Home Builder's Association Sam Awards (now CHBA National Awards for Housing Excellence), our work reflects an unwavering standard of design quality.
+                {t("home.philosophy.p2")}
               </p>
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
-                  { val: "IPD", label: "Integrated Delivery" },
-                  { val: "BIM", label: "Info Modelling" },
-                  { val: "CP", label: "Certified Pro" },
+                  { val: "IPD", label: t("home.philosophy.ipd") },
+                  { val: "BIM", label: t("home.philosophy.bim") },
+                  { val: "CP", label: t("home.philosophy.cp") },
                 ].map((item) => (
                   <div key={item.val} className="py-10 relative">
                     <span className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-px bg-[#a11d2d]/40" />
@@ -182,15 +184,15 @@ const Index = () => {
       <section className="py-32 md:py-44">
         <div className="container-site text-center">
           <ScrollReveal>
-            <h2 className="text-balance max-w-2xl mx-auto">Let's discuss your next project</h2>
+            <h2 className="text-balance max-w-2xl mx-auto">{t("home.cta.title")}</h2>
             <p className="text-muted-foreground mt-6 max-w-lg mx-auto text-[15px] font-light">
-              From concept to completion, Architect 57 delivers integrated design solutions tailored to your vision.
+              {t("home.cta.subtitle")}
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 text-[13px] tracking-[0.12em] uppercase font-normal border border-foreground/20 px-8 py-3.5 mt-10 hover:bg-foreground hover:text-background transition-all duration-300 active:scale-[0.97]"
             >
-              Start a Conversation <ArrowRight size={16} />
+              {t("home.cta.button")} <ArrowRight size={16} />
             </Link>
           </ScrollReveal>
         </div>

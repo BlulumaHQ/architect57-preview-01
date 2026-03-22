@@ -3,11 +3,13 @@ import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { allProjects } from "@/data/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const projectIndex = allProjects.findIndex((p) => p.slug === slug);
   const project = allProjects[projectIndex];
+  const { t } = useLanguage();
 
   if (!project) return <Navigate to="/projects" replace />;
 
@@ -22,15 +24,15 @@ const ProjectDetail = () => {
 
   // Build details dynamically from all available fields
   const projectDetails: { label: string; value: string }[] = [
-    { label: "Project Index", value: String(projectIndex + 1).padStart(2, "0") },
-    { label: "Category", value: project.category },
-    { label: "Tags", value: project.tags.join(", ") },
+    { label: t("projectDetail.projectIndex"), value: String(projectIndex + 1).padStart(2, "0") },
+    { label: t("projectDetail.category"), value: t(`cat.${project.category}`) },
+    { label: t("projectDetail.tags"), value: project.tags.join(", ") },
     ...(project.location
-      ? [{ label: "Location", value: project.location }]
+      ? [{ label: t("projectDetail.location"), value: project.location }]
       : []),
-    ...(project.area ? [{ label: "Area", value: project.area }] : []),
-    ...(project.budget ? [{ label: "Budget", value: project.budget }] : []),
-    ...(project.detail ? [{ label: "Detail", value: project.detail }] : []),
+    ...(project.area ? [{ label: t("projectDetail.area"), value: project.area }] : []),
+    ...(project.budget ? [{ label: t("projectDetail.budget"), value: project.budget }] : []),
+    ...(project.detail ? [{ label: t("projectDetail.detail"), value: project.detail }] : []),
   ];
 
   return (
@@ -49,7 +51,7 @@ const ProjectDetail = () => {
               {String(projectIndex + 1).padStart(2, "0")}
             </span>
             <span className="text-white/50 text-[11px] tracking-[0.2em] uppercase font-normal ml-4">
-              {project.category}
+              {t(`cat.${project.category}`)}
             </span>
             <h1 className="text-white mt-3 font-light">{project.title}</h1>
             <span className="text-white/50 text-[13px] font-light mt-2 block">
@@ -66,7 +68,7 @@ const ProjectDetail = () => {
             to="/projects"
             className="inline-flex items-center gap-2 text-[13px] tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            <ArrowLeft size={14} /> All Projects
+            <ArrowLeft size={14} /> {t("projectDetail.backAll")}
           </Link>
         </div>
       </section>
@@ -119,7 +121,7 @@ const ProjectDetail = () => {
                 className="group py-10 md:py-14 pr-6 border-r border-border hover:bg-muted/30 transition-colors"
               >
                 <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground block mb-2">
-                  Previous
+                  {t("projectDetail.previous")}
                 </span>
                 <span className="text-lg font-light group-hover:text-foreground transition-colors flex items-center gap-2">
                   <ArrowLeft size={16} className="text-muted-foreground" />
@@ -135,7 +137,7 @@ const ProjectDetail = () => {
                 className="group py-10 md:py-14 pl-6 text-right hover:bg-muted/30 transition-colors"
               >
                 <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground block mb-2">
-                  Next
+                  {t("projectDetail.next")}
                 </span>
                 <span className="text-lg font-light group-hover:text-foreground transition-colors flex items-center justify-end gap-2">
                   {nextProject.title}

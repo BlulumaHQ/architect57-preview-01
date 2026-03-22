@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Inter", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Inter", "'Noto Sans TC'", "'Microsoft JhengHei'", "sans-serif"],
+        body: ["Inter", "'Noto Sans TC'", "'Microsoft JhengHei'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
