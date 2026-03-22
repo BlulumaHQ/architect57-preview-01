@@ -561,8 +561,8 @@ export const allProjects: ProjectItem[] = [
     tags: ["Education"],
     location: "Richmond, BC",
     detail: "Designer: ID Design Consulting Ltd.",
-    image: srcProject12,
-    images: [srcProject12, srcProject3],
+    image: sqnEducation01,
+    images: [sqnEducation01],
     isFeatured: true,
     description: "A purpose-built educational facility in Richmond, designed to create nurturing and stimulating learning environments. The project was developed in collaboration with ID Design Consulting Ltd., with Architect 57 providing code consultation and compliance services.",
     details: [
