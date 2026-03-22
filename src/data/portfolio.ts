@@ -333,7 +333,7 @@ export const allProjects: ProjectItem[] = [
     location: "Langley, BC",
     detail: "Underground parking",
     image: fiftyFourthAveCondo01,
-    images: [fiftyFourthAveCondo01],
+    images: [fiftyFourthAveCondo01, fiftyFourthAveCondo02, fiftyFourthAveCondo03],
   },
   {
     slug: "bridgeport-office",
