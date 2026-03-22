@@ -502,7 +502,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "33,828 sq. ft.",
     image: corvusEnergyExpansion01,
-    images: [corvusEnergyExpansion01],
+    images: [corvusEnergyExpansion01, corvusEnergyExpansion02],
   },
   {
     slug: "rayacom-premium-print",
