@@ -22,6 +22,8 @@ import bridgeportOffice03 from "@/assets/bridgeport_office_building-03.jpg";
 import fletcherTownhouses01 from "@/assets/fletcher_townhouses-01.webp";
 import wellingtonMixUse01 from "@/assets/wellington_mix-use-01.webp";
 import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.webp";
+import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.webp";
+import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.webp";
 import collingwood01 from "@/assets/collingwood-01.webp";
 import royalOak01 from "@/assets/royal-oak-01.webp";
 import west3901 from "@/assets/west-39-01.webp";
