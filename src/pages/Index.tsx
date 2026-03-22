@@ -5,23 +5,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
-import projectImg1 from "@/assets/project-1.jpg";
-import projectImg2 from "@/assets/project-2.jpg";
-import projectImg3 from "@/assets/project-3.jpg";
-import projectImg4 from "@/assets/project-4.jpg";
-import projectImg5 from "@/assets/project-5.jpg";
-import projectImg6 from "@/assets/project-6.jpg";
+import { featuredProjects } from "@/data/portfolio";
 
 const heroSlides = [heroImage1, heroImage2];
-
-const projects = [
-  { img: projectImg1, title: "Glass Pavilion", category: "Commercial" },
-  { img: projectImg2, title: "Harbour Tower", category: "Residential" },
-  { img: projectImg3, title: "Westside Works", category: "Industrial" },
-  { img: projectImg4, title: "Union Square", category: "Mixed-Use" },
-  { img: projectImg5, title: "Civic Centre", category: "Institutional" },
-  { img: projectImg6, title: "Green Terrace", category: "Sustainable" },
-];
 
 const services = [
   { title: "Integrated Design", desc: "Full-spectrum building design spanning commercial, residential, and institutional typologies." },
@@ -122,11 +108,11 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {projects.map((p, i) => (
-              <ScrollReveal key={p.title} delay={i * 70}>
-                <Link to="/projects" className="group block relative overflow-hidden aspect-[4/3]">
+            {featuredProjects.map((p, i) => (
+              <ScrollReveal key={p.slug} delay={i * 70}>
+                <Link to={`/projects/${p.slug}`} className="group block relative overflow-hidden aspect-[4/3]">
                   <img
-                    src={p.img}
+                    src={p.heroImage}
                     alt={p.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     loading="lazy"
