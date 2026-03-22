@@ -239,7 +239,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Custom Home"],
     location: "Richmond, BC",
     image: severnResidence01,
-    images: [severnResidence01],
+    images: [severnResidence01, severnResidence02, severnResidence03],
   },
   {
     slug: "no6-residence",
