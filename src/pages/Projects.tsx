@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import {
   allProjects,
   projectCategories,
+  getRandomFeaturedProjects,
   type ProjectCategory,
 } from "@/data/portfolio";
 
@@ -13,12 +14,11 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("All");
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
-  // Top 3 featured projects (fixed picks)
-  const topFeatured = [
-    allProjects.find((p) => p.slug === "chen-residence")!,
-    allProjects.find((p) => p.slug === "bridgeport-office")!,
-    allProjects.find((p) => p.slug === "collingwood")!,
-  ].filter(Boolean);
+  // Top 3 featured projects — randomized from Residential & Commercial
+  const topFeatured = useMemo(() => {
+    const picks = getRandomFeaturedProjects(3);
+    return picks.map((p) => allProjects.find((ap) => ap.slug === p.link.replace("/projects/", ""))!).filter(Boolean);
+  }, []);
 
   // Collect unique tags from visible projects
   const availableTags = useMemo(() => {
