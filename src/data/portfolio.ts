@@ -433,7 +433,7 @@ export const allProjects: ProjectItem[] = [
     category: "Commercial",
     tags: ["Restaurant"],
     location: "Vancouver, BC",
-    image: torakeJapaneseCuisine01,
+    image: ramenOneBroadway01,
   },
   {
     slug: "bridgeport-hotel",
