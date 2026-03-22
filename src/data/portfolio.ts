@@ -106,6 +106,9 @@ import iglesiaNiCristoLocale02 from "@/assets/iglesia_ni_cristo_locale-02.webp";
 import laurelResidence02 from "@/assets/laurel-residence-02.webp";
 import littleMarines02 from "@/assets/little-marines-02.webp";
 import luResidence02 from "@/assets/lu-residence-02.webp";
+import morganPlay02 from "@/assets/morgan_play-02.webp";
+import morganPlay03 from "@/assets/morgan_play-03.webp";
+import no6Residence02 from "@/assets/no6-residence-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
@@ -236,7 +239,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Custom Home"],
     location: "Richmond, BC",
     image: no6Residence01,
-    images: [no6Residence01],
+    images: [no6Residence01, no6Residence02],
   },
   {
     slug: "vinson-creek-residence",
@@ -733,7 +736,7 @@ export const allProjects: ProjectItem[] = [
     location: "Surrey, BC",
     detail: "Designer: Yan Design Studio",
     image: morganPlay01,
-    images: [morganPlay01],
+    images: [morganPlay01, morganPlay02, morganPlay03],
   },
   {
     slug: "ace-e-sports",
