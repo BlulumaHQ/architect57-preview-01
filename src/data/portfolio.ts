@@ -12,6 +12,18 @@ import srcProject10 from "@/assets/src-project-10.jpg";
 import srcProject11 from "@/assets/src-project-11.jpg";
 import srcProject12 from "@/assets/src-project-12.jpg";
 
+// Real uploaded project images
+import austinHighRise01 from "@/assets/austin_high-rise-01.jpg";
+import austinHighRise02 from "@/assets/austin_high-rise-02.jpg";
+import bridgeportOffice01 from "@/assets/bridgeport_office_building-01.jpg";
+import bridgeportOffice02 from "@/assets/bridgeport_office_building-02.jpg";
+import bridgeportOffice03 from "@/assets/bridgeport_office_building-03.jpg";
+import fletcherTownhouses01 from "@/assets/fletcher_townhouses-01.jpg";
+import wellingtonMixUse01 from "@/assets/wellington_mix-use-01.jpg";
+import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.jpg";
+import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.jpg";
+import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.jpg";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
@@ -134,8 +146,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Richmond, BC",
     description:
       "A significant commercial office development in Richmond's Bridgeport district, designed to accommodate modern workplace needs within a refined architectural envelope. The building's massing responds to the urban context while maximizing efficient floor plates and natural light penetration across all levels.",
-    heroImage: srcProject7,
-    images: [srcProject7, srcProject8, srcProject9],
+    heroImage: bridgeportOffice01,
+    images: [bridgeportOffice01, bridgeportOffice02, bridgeportOffice03],
     details: [
       { label: "Category", value: "Commercial & Industrial" },
       { label: "Location", value: "Richmond, BC" },
@@ -218,34 +230,34 @@ export const collections: Collection[] = [
     category: "Multi-Unit Housing",
     description:
       "High-rise, mid-rise, and townhouse developments designed for urban density, modern living, and community integration.",
-    coverImage: srcProject7,
+    coverImage: austinHighRise01,
     items: [
       {
-        image: srcProject7,
+        image: austinHighRise01,
         title: "Austin High-Rise",
         location: "Coquitlam, BC",
         meta: "77,527 sq. ft. · Budget: $25 million",
       },
       {
-        image: srcProject8,
+        image: fiftyFourthAveCondo01,
         title: "54th Ave Condo (12-Storey)",
         location: "Langley, BC",
         meta: "12-storey with underground parking",
       },
       {
-        image: srcProject9,
+        image: fiftyFourthAveCondo02,
         title: "54th Ave Condo (4-Storey)",
         location: "Langley, BC",
         meta: "4-storey with underground parking",
       },
       {
-        image: srcProject4,
+        image: wellingtonMixUse01,
         title: "Wellington Mix-Use",
         location: "Chilliwack, BC",
         meta: "90,740 sq. ft. · Budget: $20 million",
       },
       {
-        image: srcProject10,
+        image: fletcherTownhouses01,
         title: "Fletcher Townhouses",
         location: "Maple Ridge, BC",
         meta: "15 units (5 types)",
@@ -335,7 +347,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Bridgeport Office Building",
     category: "Commercial & Industrial",
-    image: srcProject7,
+    image: bridgeportOffice01,
     link: "/projects/bridgeport-office",
   },
   {
