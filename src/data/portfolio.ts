@@ -64,8 +64,8 @@ export const featuredProjects: FeaturedProject[] = [
     year: "2022",
     description:
       "A 32-storey residential tower featuring floor-to-ceiling glazing, panoramic city and harbour views, and a refined material palette of concrete, glass, and warm timber accents. The design prioritizes vertical community with shared amenity spaces on every eighth floor.",
-    heroImage: projectImg2,
-    images: [projectImg2, featuredHarbour2, featuredHarbour3],
+    heroImage: srcProject4,
+    images: [srcProject4, srcProject5, srcProject6],
     details: [
       { label: "Typology", value: "High-Rise Residential" },
       { label: "Area", value: "285,000 sq ft" },
