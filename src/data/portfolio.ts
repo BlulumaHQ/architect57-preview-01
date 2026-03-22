@@ -415,7 +415,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     detail: "Design architect: GBL Architects",
     image: bridgeportHotel01,
-    images: [bridgeportHotel01],
+    images: [bridgeportHotel01, bridgeportHotel02],
   },
 
   // ── INDUSTRIAL ───────────────────────────────────────
