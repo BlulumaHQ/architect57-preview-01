@@ -21,6 +21,10 @@ const CollectionGallery = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title={`${category} Projects | Architect 57 無極建築`}
+        description={`Browse ${category.toLowerCase()} projects by Architect 57 Inc. — ${categoryProjects.length} projects showcasing integrated design-build expertise in ${category.toLowerCase()} architecture.`}
+      />
       {/* Hero */}
       <section className="pt-36 pb-16 md:pt-44 md:pb-20">
         <div className="container-site">
