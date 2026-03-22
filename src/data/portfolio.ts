@@ -462,7 +462,7 @@ export const allProjects: ProjectItem[] = [
     location: "Vancouver, BC",
     area: "128,285 sq. ft.",
     image: rayacomSuperPrintFactory01,
-    images: [rayacomSuperPrintFactory01],
+    images: [rayacomSuperPrintFactory01, rayacomSuperPrintFactory02],
   },
   {
     slug: "trouw-frankie-feed-mill",
