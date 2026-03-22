@@ -230,7 +230,7 @@ export const collections: Collection[] = [
     category: "Multi-Unit Housing",
     description:
       "High-rise, mid-rise, and townhouse developments designed for urban density, modern living, and community integration.",
-    coverImage: srcProject7,
+    coverImage: austinHighRise01,
     items: [
       {
         image: austinHighRise01,
