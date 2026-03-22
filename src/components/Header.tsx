@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/architect-57-logo.svg";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -34,9 +35,7 @@ const Header = () => {
     >
       <div className="container-site flex items-center justify-between h-20 md:h-24">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-lg tracking-[0.15em] uppercase font-light text-foreground">
-            Architect 57
-          </span>
+          <img src={logo} alt="Architect 57" className="h-[45px] w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">

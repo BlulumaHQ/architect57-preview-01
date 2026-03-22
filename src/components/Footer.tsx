@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoWhite from "@/assets/architect-57-logo-white.svg";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,9 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-6">
           {/* Column 1: Wordmark & Description */}
           <div className="md:col-span-1">
-            <div className="text-lg tracking-[0.15em] uppercase font-light text-background mb-5">
-              Architect 57
-            </div>
+            <img src={logoWhite} alt="Architect 57" className="h-[40px] w-auto mb-5" />
             <p className="text-sm leading-relaxed text-background/40 font-light">
               Integrated building design, code consultation, and sustainable architecture serving Richmond, BC.
             </p>
