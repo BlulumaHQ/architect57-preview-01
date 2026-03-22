@@ -74,6 +74,7 @@ import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
 import adore01 from "@/assets/adore-01.webp";
 import architect5701 from "@/assets/architect-57-01.webp";
+import architect5702 from "@/assets/architect-57-02.webp";
 import beresfordDoctorClinic01 from "@/assets/beresford_doctor_clinic-01.webp";
 
 // ─── Types ───────────────────────────────────────────────
