@@ -1,8 +1,14 @@
-// Source project images (legacy)
-import srcProject3 from "@/assets/src-project-3.jpg";
-import srcProject6 from "@/assets/src-project-6.jpg";
-import srcProject9 from "@/assets/src-project-9.jpg";
-import srcProject12 from "@/assets/src-project-12.jpg";
+// New real project images
+import cleardent01 from "@/assets/cleardent-01.webp";
+import lionsTravel01 from "@/assets/lions_travel-01.webp";
+import tecoOffice01 from "@/assets/teco_office-01.webp";
+import titanicExhibition01 from "@/assets/titanic_exhibition-01.webp";
+import east2ndAve01 from "@/assets/east-2nd-ave-01.webp";
+import happyMay01 from "@/assets/happy-may-01.webp";
+import littleMarines01 from "@/assets/little-marines-01.webp";
+import phiEducation01 from "@/assets/phi-education-01.webp";
+import sqnEducation01 from "@/assets/sqn-education-01.webp";
+import torakeJapaneseCuisine01 from "@/assets/torake-japanese-cuisine-01.webp";
 
 // Real uploaded project images
 import austinHighRise01 from "@/assets/austin_high-rise-01.webp";
