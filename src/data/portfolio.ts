@@ -280,7 +280,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "3,680 sq. ft.",
     image: xuResidence01,
-    images: [xuResidence01],
+    images: [xuResidence01, xuResidence02, xuResidence03],
   },
   {
     slug: "wu-residence",
