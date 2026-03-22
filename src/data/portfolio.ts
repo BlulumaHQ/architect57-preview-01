@@ -768,7 +768,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Office"],
     location: "Downtown Vancouver, BC",
-    image: srcProject12,
+    image: tecoOffice01,
   },
   {
     slug: "triple-a-commercial",
