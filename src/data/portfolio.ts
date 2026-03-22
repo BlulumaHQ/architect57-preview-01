@@ -738,7 +738,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Retail"],
     location: "Richmond, BC",
     area: "11,639 sq. ft.",
-    image: east2ndAve01,
+    image: applianceCanada01,
   },
   {
     slug: "titanic-exhibition",
