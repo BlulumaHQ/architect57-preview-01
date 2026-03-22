@@ -590,7 +590,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     detail: "Designer: ID Design Consulting Ltd.",
     image: sqnEducation01,
-    images: [sqnEducation01],
+    images: [sqnEducation01, sqnEducation02, sqnEducation03],
   },
   {
     slug: "phi-education",
