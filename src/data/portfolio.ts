@@ -60,6 +60,11 @@ import chenResidence02 from "@/assets/chen-residence-02.webp";
 import chenResidence03 from "@/assets/chen-residence-03.webp";
 import chenResidence04 from "@/assets/chen-residence-04.webp";
 import hanResidence01 from "@/assets/han-residence-01.webp";
+import hanResidence02 from "@/assets/han-residence-02.webp";
+import hanResidence03 from "@/assets/han-residence-03.webp";
+import hanResidence04 from "@/assets/han-residence-04.webp";
+import hanResidence05 from "@/assets/han-residence-05.webp";
+import herbalandNewProduction02 from "@/assets/herbaland_new_production-02.webp";
 import severnResidence01 from "@/assets/severn-residence-01.webp";
 import xuResidence01 from "@/assets/xu-residence-01.webp";
 import no6Residence01 from "@/assets/no6-residence-01.webp";
@@ -209,7 +214,7 @@ export const allProjects: ProjectItem[] = [
     location: "Delta, BC",
     area: "6,078 sq. ft.",
     image: hanResidence01,
-    images: [hanResidence01],
+    images: [hanResidence01, hanResidence02, hanResidence03, hanResidence04, hanResidence05],
   },
   {
     slug: "severn-residence",
@@ -538,7 +543,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "43,601 sq. ft.",
     image: herbalandNewProduction01,
-    images: [herbalandNewProduction01],
+    images: [herbalandNewProduction01, herbalandNewProduction02],
   },
   {
     slug: "hazco-environmental-transfer",
