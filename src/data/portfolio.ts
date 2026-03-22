@@ -267,7 +267,7 @@ export const allProjects: ProjectItem[] = [
     location: "West Vancouver, BC",
     area: "9,343 sq. ft.",
     image: vinsonCreekResidence01,
-    images: [vinsonCreekResidence01],
+    images: [vinsonCreekResidence01, vinsonCreekResidence02],
   },
   {
     slug: "xu-residence",
