@@ -718,6 +718,15 @@ export const allProjects: ProjectItem[] = [
 
   // ── INTERIOR PROJECTS ────────────────────────────────
   {
+    slug: "architect-57-office",
+    title: "Architect 57",
+    category: "Interior Projects",
+    tags: ["Office Interior"],
+    location: "Richmond, BC",
+    image: architect5701,
+    images: [architect5701, architect5702],
+  },
+  {
     slug: "teco-office",
     title: "Teco Office",
     category: "Interior Projects",
