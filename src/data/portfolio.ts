@@ -16,9 +16,11 @@ import applianceCanada01 from "@/assets/appliance_canada-01.webp";
 
 // Real uploaded project images
 import austinHighRise01 from "@/assets/austin_high-rise-01.webp";
+import austinHighRise02 from "@/assets/austin_high-rise-02.webp";
 import bridgeportOffice01 from "@/assets/bridgeport_office_building-01.webp";
-import bridgeportOffice02 from "@/assets/bridgeport_office_building-02.jpg";
-import bridgeportOffice03 from "@/assets/bridgeport_office_building-03.jpg";
+import bridgeportOffice02 from "@/assets/bridgeport_office_building-02.webp";
+import bridgeportOffice03 from "@/assets/bridgeport_office_building-03.webp";
+import bridgeportHotel02 from "@/assets/bridgeport-hotel-02.webp";
 import fletcherTownhouses01 from "@/assets/fletcher_townhouses-01.webp";
 import wellingtonMixUse01 from "@/assets/wellington_mix-use-01.webp";
 import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.webp";
