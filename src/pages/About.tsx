@@ -19,6 +19,10 @@ const About = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title="About | Architect 57 無極建築"
+        description="Learn about Architect 57 Inc., a Richmond-based architecture studio specializing in integrated design-build, code consulting, and sustainable project delivery across Western Canada."
+      />
       {/* Hero */}
       <section className="pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="container-site">
