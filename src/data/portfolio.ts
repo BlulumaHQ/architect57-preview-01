@@ -233,31 +233,31 @@ export const collections: Collection[] = [
     coverImage: srcProject7,
     items: [
       {
-        image: srcProject7,
+        image: austinHighRise01,
         title: "Austin High-Rise",
         location: "Coquitlam, BC",
         meta: "77,527 sq. ft. · Budget: $25 million",
       },
       {
-        image: srcProject8,
+        image: fiftyFourthAveCondo01,
         title: "54th Ave Condo (12-Storey)",
         location: "Langley, BC",
         meta: "12-storey with underground parking",
       },
       {
-        image: srcProject9,
+        image: fiftyFourthAveCondo02,
         title: "54th Ave Condo (4-Storey)",
         location: "Langley, BC",
         meta: "4-storey with underground parking",
       },
       {
-        image: srcProject4,
+        image: wellingtonMixUse01,
         title: "Wellington Mix-Use",
         location: "Chilliwack, BC",
         meta: "90,740 sq. ft. · Budget: $20 million",
       },
       {
-        image: srcProject10,
+        image: fletcherTownhouses01,
         title: "Fletcher Townhouses",
         location: "Maple Ridge, BC",
         meta: "15 units (5 types)",
