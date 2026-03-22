@@ -24,6 +24,18 @@ import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.jpg";
 import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.jpg";
 import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.jpg";
 
+// New batch uploaded project images
+import collingwood01 from "@/assets/collingwood-01.webp";
+import fletcherTownhouses01webp from "@/assets/fletcher_townhouses-01.webp";
+import royalOak01 from "@/assets/royal-oak-01.webp";
+import west3901 from "@/assets/west-39-01.webp";
+import seavale01 from "@/assets/seavale-01.webp";
+import wellingtonMixUse01webp from "@/assets/wellington_mix-use-01.webp";
+import fiftyFourthAveCondo01webp from "@/assets/54th_ave_condo-01.webp";
+import zone5UnionBay01 from "@/assets/zone_5_union_bay_estate-01.webp";
+import newUniversityHospital01 from "@/assets/new_university_hospital-01.webp";
+import dubaiHouseOfFuture01 from "@/assets/dubai_house_of_the_future-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
@@ -163,8 +175,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Vancouver, BC",
     description:
       "A contemporary multi-unit housing development in Vancouver's Collingwood neighbourhood, contributing thoughtfully to the area's increasing urban density. The design balances privacy between units with shared landscape amenity, creating a cohesive residential community within a compact urban footprint.",
-    heroImage: srcProject10,
-    images: [srcProject10, srcProject11],
+    heroImage: collingwood01,
+    images: [collingwood01],
     details: [
       { label: "Category", value: "Multi-Unit Housing" },
       { label: "Location", value: "Vancouver, BC" },
@@ -263,19 +275,19 @@ export const collections: Collection[] = [
         meta: "15 units (5 types)",
       },
       {
-        image: srcProject11,
+        image: royalOak01,
         title: "Royal Oak",
         location: "Burnaby, BC",
         meta: "12,627 sq. ft. · Budget: $5.45 million",
       },
       {
-        image: srcProject12,
+        image: west3901,
         title: "West 39 Avenue",
         location: "Vancouver, BC",
         meta: "4,438 sq. ft. · Budget: $1.78 million",
       },
       {
-        image: srcProject6,
+        image: seavale01,
         title: "Seavale",
         location: "Richmond, BC",
         meta: "4,658 sq. ft. · Budget: $1.39 million",
@@ -307,22 +319,22 @@ export const collections: Collection[] = [
     category: "Master Planning",
     description:
       "Large-scale planning projects encompassing community master plans, institutional campus planning, and international competition entries.",
-    coverImage: srcProject8,
+    coverImage: zone5UnionBay01,
     items: [
       {
-        image: srcProject8,
+        image: zone5UnionBay01,
         title: "Zone 5, Union Bay Estate",
         location: "Union Bay, BC",
         meta: "1,189,000 sq. ft. (27.30 acres)",
       },
       {
-        image: srcProject7,
+        image: newUniversityHospital01,
         title: "New University Hospital of Northern BC",
         location: "Prince George, BC",
         meta: "277,000 sq. ft. · Budget: $700 million",
       },
       {
-        image: srcProject9,
+        image: dubaiHouseOfFuture01,
         title: "Dubai House of the Future Competition",
         meta: "570,000 sq. ft. (13.09 acres)",
       },
@@ -341,7 +353,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Collingwood",
     category: "Multi-Unit Housing",
-    image: srcProject10,
+    image: collingwood01,
     link: "/projects/collingwood",
   },
   {
@@ -353,7 +365,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Zone 5, Union Bay Estate",
     category: "Master Planning",
-    image: srcProject8,
+    image: zone5UnionBay01,
     link: "/projects/collection/master-planning",
   },
 ];
