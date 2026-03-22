@@ -46,6 +46,18 @@ import morganPlay01 from "@/assets/morgan_play-01.webp";
 import okanaganChateauRetirement01 from "@/assets/okanagan_chateau_retirement-01.webp";
 import siennaRideauRetirement01 from "@/assets/sienna_rideau_retirement-01.webp";
 
+// Batch 4 uploaded project images
+import chenResidence01 from "@/assets/chen-residence-01.webp";
+import hanResidence01 from "@/assets/han-residence-01.webp";
+import severnResidence01 from "@/assets/severn-residence-01.webp";
+import xuResidence01 from "@/assets/xu-residence-01.webp";
+import no6Residence01 from "@/assets/no6-residence-01.webp";
+import vinsonCreekResidence01 from "@/assets/vinson-creek-residence-01.webp";
+import wuResidence01 from "@/assets/wu-residence-01.webp";
+import cartierResidence01 from "@/assets/cartier-residence-01.webp";
+import laurelResidence01 from "@/assets/laurel-residence-01.webp";
+import treasureCoveCasino01 from "@/assets/treasure_cove_casino-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
