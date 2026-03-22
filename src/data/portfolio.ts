@@ -22,6 +22,8 @@ import bridgeportOffice03 from "@/assets/bridgeport_office_building-03.jpg";
 import fletcherTownhouses01 from "@/assets/fletcher_townhouses-01.webp";
 import wellingtonMixUse01 from "@/assets/wellington_mix-use-01.webp";
 import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.webp";
+import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.webp";
+import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.webp";
 import collingwood01 from "@/assets/collingwood-01.webp";
 import royalOak01 from "@/assets/royal-oak-01.webp";
 import west3901 from "@/assets/west-39-01.webp";
@@ -32,6 +34,8 @@ import dubaiHouseOfFuture01 from "@/assets/dubai_house_of_the_future-01.webp";
 
 import vanguardFitness01 from "@/assets/vanguard_fitness-01.webp";
 import aceEsports01 from "@/assets/ace_e-sports-01.webp";
+import aceEsports02 from "@/assets/ace_e-sports-02.webp";
+import aceEsports03 from "@/assets/ace_e-sports-03.webp";
 import atomicFitness01 from "@/assets/atomic_fitness-01.webp";
 import katalinCareHomes01 from "@/assets/katalin_care_homes-01.webp";
 import mariposaGardensRetirement01 from "@/assets/mariposa_gardens_retirement-01.webp";
@@ -70,6 +74,7 @@ import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
 import adore01 from "@/assets/adore-01.webp";
 import architect5701 from "@/assets/architect-57-01.webp";
+import architect5702 from "@/assets/architect-57-02.webp";
 import beresfordDoctorClinic01 from "@/assets/beresford_doctor_clinic-01.webp";
 
 // ─── Types ───────────────────────────────────────────────
@@ -328,7 +333,7 @@ export const allProjects: ProjectItem[] = [
     location: "Langley, BC",
     detail: "Underground parking",
     image: fiftyFourthAveCondo01,
-    images: [fiftyFourthAveCondo01],
+    images: [fiftyFourthAveCondo01, fiftyFourthAveCondo02, fiftyFourthAveCondo03],
   },
   {
     slug: "bridgeport-office",
@@ -359,7 +364,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Condo"],
     location: "Langley, BC",
     image: fiftyFourthAveCondo01,
-    images: [fiftyFourthAveCondo01],
+    images: [fiftyFourthAveCondo01, fiftyFourthAveCondo03],
   },
   {
     slug: "fletcher-townhouses",
@@ -708,10 +713,19 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "4,886 sq. ft.",
     image: aceEsports01,
-    images: [aceEsports01],
+    images: [aceEsports01, aceEsports02, aceEsports03],
   },
 
   // ── INTERIOR PROJECTS ────────────────────────────────
+  {
+    slug: "architect-57-office",
+    title: "Architect 57",
+    category: "Interior Projects",
+    tags: ["Office Interior"],
+    location: "Richmond, BC",
+    image: architect5701,
+    images: [architect5701, architect5702],
+  },
   {
     slug: "teco-office",
     title: "Teco Office",
