@@ -433,7 +433,7 @@ export const allProjects: ProjectItem[] = [
     area: "2,415 sq. ft.",
     budget: "$1 million",
     image: sushiKiwami01,
-    images: [sushiKiwami01],
+    images: [sushiKiwami01, sushiKiwami02, sushiKiwami03, sushiKiwami04, sushiKiwami05],
   },
   {
     slug: "torake-japanese-cuisine",
