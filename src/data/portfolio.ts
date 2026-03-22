@@ -378,7 +378,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Chen Residence",
     category: "Residential",
-    image: srcProject1,
+    image: chenResidence01,
     link: "/projects/chen-residence",
   },
   {
