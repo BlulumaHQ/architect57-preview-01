@@ -802,7 +802,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "15,801 sq. ft.",
     image: titanicExhibition01,
-    images: [titanicExhibition01],
+    images: [titanicExhibition01, titanicExhibition02],
   },
   {
     slug: "beresford-doctor-clinic",
