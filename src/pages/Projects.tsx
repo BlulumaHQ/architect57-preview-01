@@ -5,7 +5,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 import {
   allProjects,
-  featuredProjects,
   projectCategories,
   type ProjectCategory,
 } from "@/data/portfolio";
@@ -14,14 +13,19 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("All");
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
-  // Top 3 featured projects (fixed, not filtered)
-  const topFeatured = featuredProjects.slice(0, 3);
+  // Top 3 featured projects (fixed picks)
+  const topFeatured = [
+    allProjects.find((p) => p.slug === "chen-residence")!,
+    allProjects.find((p) => p.slug === "bridgeport-office")!,
+    allProjects.find((p) => p.slug === "collingwood")!,
+  ].filter(Boolean);
 
   // Collect unique tags from visible projects
   const availableTags = useMemo(() => {
-    const filtered = activeFilter === "All"
-      ? allProjects
-      : allProjects.filter((p) => p.category === activeFilter);
+    const filtered =
+      activeFilter === "All"
+        ? allProjects
+        : allProjects.filter((p) => p.category === activeFilter);
     const tagSet = new Set<string>();
     filtered.forEach((p) => p.tags.forEach((t) => tagSet.add(t)));
     return Array.from(tagSet).sort();
@@ -81,9 +85,10 @@ const Projects = () => {
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500" />
-                    <div className="absolute bottom-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <ArrowRight size={18} className="text-white" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
+                      <span className="text-white text-[13px] tracking-[0.12em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        See Details
+                      </span>
                     </div>
                   </div>
                   <div className="mt-4">
@@ -91,7 +96,8 @@ const Projects = () => {
                       {project.title}
                     </h2>
                     <span className="text-[12px] text-muted-foreground font-light mt-1 block">
-                      {project.category}{project.location ? ` — ${project.location}` : ""}
+                      {project.category}
+                      {project.location ? ` — ${project.location}` : ""}
                     </span>
                   </div>
                 </Link>
@@ -171,46 +177,37 @@ const Projects = () => {
         <div className="container-site">
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {filteredProjects.map((project, i) => {
-                const hasDetail = project.isFeatured;
-                const CardWrapper = hasDetail ? Link : "div";
-                const cardProps = hasDetail
-                  ? { to: `/projects/${project.slug}` }
-                  : {};
-
-                return (
-                  <ScrollReveal key={`${project.slug}-${i}`} delay={i * 50}>
-                    <CardWrapper
-                      {...(cardProps as any)}
-                      className="group block"
-                    >
-                      <div className="relative overflow-hidden aspect-[4/3]">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500" />
-                        {hasDetail && (
-                          <div className="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            <ArrowRight size={16} className="text-white" />
-                          </div>
-                        )}
-                      </div>
-                      <div className="mt-3">
-                        <h3 className="text-[15px] font-light tracking-[-0.01em]">
-                          {project.title}
-                        </h3>
-                        <span className="text-[11px] text-muted-foreground font-light mt-0.5 block">
-                          {project.location || ""}
-                          {project.area ? ` · ${project.area}` : ""}
+              {filteredProjects.map((project, i) => (
+                <ScrollReveal key={`${project.slug}-${i}`} delay={i * 50}>
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="group block"
+                  >
+                    <div className="relative overflow-hidden aspect-[4/3]">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
+                        <span className="text-white text-[12px] tracking-[0.1em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          See Details
                         </span>
                       </div>
-                    </CardWrapper>
-                  </ScrollReveal>
-                );
-              })}
+                    </div>
+                    <div className="mt-3">
+                      <h3 className="text-[15px] font-light tracking-[-0.01em]">
+                        {project.title}
+                      </h3>
+                      <span className="text-[11px] text-muted-foreground font-light mt-0.5 block">
+                        {project.location || ""}
+                        {project.area ? ` · ${project.area}` : ""}
+                      </span>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              ))}
             </div>
           ) : (
             <div className="text-center py-24">
