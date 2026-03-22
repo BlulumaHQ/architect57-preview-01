@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
 import { Mail } from "lucide-react";
