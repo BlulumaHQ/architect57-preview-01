@@ -81,8 +81,8 @@ export const featuredProjects: FeaturedProject[] = [
     year: "2024",
     description:
       "A mixed-use development integrating ground-floor retail with six storeys of residential living above. The project features a landscaped interior courtyard connecting commercial and residential communities through a shared, pedestrian-friendly environment.",
-    heroImage: projectImg4,
-    images: [projectImg4, featuredUnion2, featuredUnion3],
+    heroImage: srcProject7,
+    images: [srcProject7, srcProject8, srcProject9],
     details: [
       { label: "Typology", value: "Mixed-Use" },
       { label: "Area", value: "142,000 sq ft" },
