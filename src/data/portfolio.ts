@@ -587,7 +587,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Preschool"],
     location: "Coquitlam, BC",
     detail: "Designer: Yan Design Studio",
-    image: srcProject6,
+    image: littleMarines01,
   },
   {
     slug: "happy-may-iv",
