@@ -186,7 +186,7 @@ export const allProjects: ProjectItem[] = [
     area: "6,729 sq. ft.",
     detail: "CHBA National SAM Awards Finalist",
     image: chenResidence01,
-    images: [chenResidence01],
+    images: [chenResidence01, chenResidence02, chenResidence03, chenResidence04],
   },
   {
     slug: "han-residence",
