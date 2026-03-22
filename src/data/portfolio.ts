@@ -36,6 +36,16 @@ import zone5UnionBay01 from "@/assets/zone_5_union_bay_estate-01.webp";
 import newUniversityHospital01 from "@/assets/new_university_hospital-01.webp";
 import dubaiHouseOfFuture01 from "@/assets/dubai_house_of_the_future-01.webp";
 
+// Batch 3 uploaded project images
+import vanguardFitness01 from "@/assets/vanguard_fitness-01.webp";
+import aceEsports01 from "@/assets/ace_e-sports-01.webp";
+import atomicFitness01 from "@/assets/atomic_fitness-01.webp";
+import katalinCareHomes01 from "@/assets/katalin_care_homes-01.webp";
+import mariposaGardensRetirement01 from "@/assets/mariposa_gardens_retirement-01.webp";
+import morganPlay01 from "@/assets/morgan_play-01.webp";
+import okanaganChateauRetirement01 from "@/assets/okanagan_chateau_retirement-01.webp";
+import siennaRideauRetirement01 from "@/assets/sienna_rideau_retirement-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
@@ -311,6 +321,14 @@ export const collections: Collection[] = [
         meta: "Designer: Yan Design Studio · Codes: Architect 57 Inc.",
       },
       { image: srcProject9, title: "Happy May IV", location: "Richmond, BC" },
+      { image: vanguardFitness01, title: "Vanguard Fitness", location: "BC" },
+      { image: aceEsports01, title: "Ace E-Sports", location: "BC" },
+      { image: atomicFitness01, title: "Atomic Fitness", location: "BC" },
+      { image: katalinCareHomes01, title: "Katalin Care Homes", location: "BC" },
+      { image: mariposaGardensRetirement01, title: "Mariposa Gardens Retirement", location: "BC" },
+      { image: morganPlay01, title: "Morgan Play", location: "BC" },
+      { image: okanaganChateauRetirement01, title: "Okanagan Chateau Retirement", location: "BC" },
+      { image: siennaRideauRetirement01, title: "Sienna Rideau Retirement", location: "BC" },
     ],
   },
   {
