@@ -149,8 +149,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Richmond, BC",
     description:
       "A custom single-family residence in Richmond that embodies clean contemporary lines and thoughtful spatial planning. The design prioritizes natural light and flow between interior living spaces and outdoor areas, creating a home that feels open yet intimate.",
-    heroImage: srcProject2,
-    images: [srcProject2, srcProject3],
+    heroImage: severnResidence01,
+    images: [severnResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "Richmond, BC" },
