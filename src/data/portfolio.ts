@@ -353,7 +353,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Collingwood",
     category: "Multi-Unit Housing",
-    image: srcProject10,
+    image: collingwood01,
     link: "/projects/collingwood",
   },
   {
