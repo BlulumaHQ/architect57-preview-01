@@ -889,54 +889,51 @@ export const allProjects: ProjectItem[] = [
   },
 ];
 
-// Randomized homepage featured projects — category-diverse on each refresh
+// Randomized featured projects — Residential & Commercial only
 export function getRandomFeaturedProjects(count = 4): HomepageProject[] {
-  const categories: ProjectCategory[] = [
-    "Residential",
-    "Commercial",
-    "Industrial",
-    "Institutional",
-    "Community & Cultural",
-    "Interior Projects",
-    "Master Planning",
-  ];
+  const residential = allProjects.filter((p) => p.category === "Residential");
+  const commercial = allProjects.filter((p) => p.category === "Commercial");
 
-  // Shuffle categories
-  const shuffledCats = [...categories].sort(() => Math.random() - 0.5);
+  const pick = (pool: typeof allProjects, n: number, exclude: Set<string>) => {
+    const available = pool.filter((p) => !exclude.has(p.slug));
+    const shuffled = [...available].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, n);
+  };
 
-  const picked: HomepageProject[] = [];
   const usedSlugs = new Set<string>();
+  const picked: HomepageProject[] = [];
 
-  // Pick one from each category until we have enough
-  for (const cat of shuffledCats) {
-    if (picked.length >= count) break;
-    const pool = allProjects.filter(
-      (p) => p.category === cat && !usedSlugs.has(p.slug)
-    );
-    if (pool.length === 0) continue;
-    const proj = pool[Math.floor(Math.random() * pool.length)];
-    usedSlugs.add(proj.slug);
+  // For count=4: aim for 2 Residential + 2 Commercial
+  // For count=3: aim for 2 of one + 1 of other (randomized)
+  const half = Math.floor(count / 2);
+  const remainder = count - half;
+  const firstCat = Math.random() < 0.5 ? residential : commercial;
+  const secondCat = firstCat === residential ? commercial : residential;
+
+  const firstPicks = pick(firstCat, half, usedSlugs);
+  firstPicks.forEach((p) => usedSlugs.add(p.slug));
+
+  const secondPicks = pick(secondCat, remainder, usedSlugs);
+  secondPicks.forEach((p) => usedSlugs.add(p.slug));
+
+  // If either pool was short, fill from the other
+  const all = [...firstPicks, ...secondPicks];
+  if (all.length < count) {
+    const combined = [...residential, ...commercial].filter((p) => !usedSlugs.has(p.slug));
+    const extra = [...combined].sort(() => Math.random() - 0.5).slice(0, count - all.length);
+    all.push(...extra);
+  }
+
+  // Shuffle final order
+  all.sort(() => Math.random() - 0.5);
+
+  for (const proj of all) {
     picked.push({
       title: proj.title,
       category: proj.category,
       image: proj.image,
       link: `/projects/${proj.slug}`,
     });
-  }
-
-  // If still short, fill from remaining
-  if (picked.length < count) {
-    const remaining = allProjects.filter((p) => !usedSlugs.has(p.slug));
-    const shuffled = remaining.sort(() => Math.random() - 0.5);
-    for (const proj of shuffled) {
-      if (picked.length >= count) break;
-      picked.push({
-        title: proj.title,
-        category: proj.category,
-        image: proj.image,
-        link: `/projects/${proj.slug}`,
-      });
-    }
   }
 
   return picked;
