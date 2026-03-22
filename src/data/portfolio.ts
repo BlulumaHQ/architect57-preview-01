@@ -792,7 +792,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Office"],
     location: "Burnaby, BC",
-    image: srcProject6,
+    image: lionsTravel01,
   },
   {
     slug: "adore",
