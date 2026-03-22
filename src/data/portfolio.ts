@@ -325,7 +325,7 @@ export const allProjects: ProjectItem[] = [
     area: "12,627 sq. ft.",
     budget: "$5.45 millions",
     image: royalOak01,
-    images: [royalOak01],
+    images: [royalOak01, royalOak02],
   },
   {
     slug: "west-39-avenue",
