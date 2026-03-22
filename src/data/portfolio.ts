@@ -34,6 +34,8 @@ import dubaiHouseOfFuture01 from "@/assets/dubai_house_of_the_future-01.webp";
 
 import vanguardFitness01 from "@/assets/vanguard_fitness-01.webp";
 import aceEsports01 from "@/assets/ace_e-sports-01.webp";
+import aceEsports02 from "@/assets/ace_e-sports-02.webp";
+import aceEsports03 from "@/assets/ace_e-sports-03.webp";
 import atomicFitness01 from "@/assets/atomic_fitness-01.webp";
 import katalinCareHomes01 from "@/assets/katalin_care_homes-01.webp";
 import mariposaGardensRetirement01 from "@/assets/mariposa_gardens_retirement-01.webp";
