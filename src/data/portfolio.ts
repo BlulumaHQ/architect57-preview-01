@@ -47,6 +47,9 @@ import okanaganChateauRetirement01 from "@/assets/okanagan_chateau_retirement-01
 import siennaRideauRetirement01 from "@/assets/sienna_rideau_retirement-01.webp";
 
 import chenResidence01 from "@/assets/chen-residence-01.webp";
+import chenResidence02 from "@/assets/chen-residence-02.webp";
+import chenResidence03 from "@/assets/chen-residence-03.webp";
+import chenResidence04 from "@/assets/chen-residence-04.webp";
 import hanResidence01 from "@/assets/han-residence-01.webp";
 import severnResidence01 from "@/assets/severn-residence-01.webp";
 import xuResidence01 from "@/assets/xu-residence-01.webp";
