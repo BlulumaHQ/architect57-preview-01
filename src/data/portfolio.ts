@@ -713,7 +713,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "4,886 sq. ft.",
     image: aceEsports01,
-    images: [aceEsports01],
+    images: [aceEsports01, aceEsports02, aceEsports03],
   },
 
   // ── INTERIOR PROJECTS ────────────────────────────────
