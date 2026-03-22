@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/architect-57-logo.svg";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
