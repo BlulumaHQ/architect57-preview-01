@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { allProjects } from "@/data/portfolio";
