@@ -290,7 +290,7 @@ export const allProjects: ProjectItem[] = [
     location: "West Vancouver, BC",
     area: "6,733 sq. ft.",
     image: wuResidence01,
-    images: [wuResidence01],
+    images: [wuResidence01, wuResidence02],
   },
   {
     slug: "lu-residence",
