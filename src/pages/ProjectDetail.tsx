@@ -2,28 +2,35 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { featuredProjects } from "@/data/portfolio";
+import { allProjects } from "@/data/portfolio";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const projectIndex = featuredProjects.findIndex((p) => p.slug === slug);
-  const project = featuredProjects[projectIndex];
+  const projectIndex = allProjects.findIndex((p) => p.slug === slug);
+  const project = allProjects[projectIndex];
 
   if (!project) return <Navigate to="/projects" replace />;
 
   const prevProject =
-    projectIndex > 0 ? featuredProjects[projectIndex - 1] : null;
+    projectIndex > 0 ? allProjects[projectIndex - 1] : null;
   const nextProject =
-    projectIndex < featuredProjects.length - 1
-      ? featuredProjects[projectIndex + 1]
+    projectIndex < allProjects.length - 1
+      ? allProjects[projectIndex + 1]
       : null;
 
   const galleryImages = project.images || [project.image];
-  const projectDetails = project.details || [
+
+  // Build details dynamically from all available fields
+  const projectDetails: { label: string; value: string }[] = [
+    { label: "Project Index", value: String(projectIndex + 1).padStart(2, "0") },
     { label: "Category", value: project.category },
-    ...(project.location ? [{ label: "Location", value: project.location }] : []),
+    { label: "Tags", value: project.tags.join(", ") },
+    ...(project.location
+      ? [{ label: "Location", value: project.location }]
+      : []),
     ...(project.area ? [{ label: "Area", value: project.area }] : []),
     ...(project.budget ? [{ label: "Budget", value: project.budget }] : []),
+    ...(project.detail ? [{ label: "Detail", value: project.detail }] : []),
   ];
 
   return (
@@ -38,7 +45,10 @@ const ProjectDetail = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 pb-14 md:pb-20">
           <div className="container-site">
-            <span className="text-white/50 text-[11px] tracking-[0.2em] uppercase font-normal">
+            <span className="text-white/40 text-[13px] tracking-[0.2em] uppercase font-light">
+              {String(projectIndex + 1).padStart(2, "0")}
+            </span>
+            <span className="text-white/50 text-[11px] tracking-[0.2em] uppercase font-normal ml-4">
               {project.category}
             </span>
             <h1 className="text-white mt-3 font-light">{project.title}</h1>
@@ -61,30 +71,21 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Info + Description */}
+      {/* Info */}
       <section className="py-16 md:py-24">
         <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <ScrollReveal>
-              <div className="lg:col-span-2">
-                <p className="text-lg md:text-xl font-light leading-relaxed text-foreground/80">
-                  {project.description}
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="space-y-5">
-                {projectDetails.map((d) => (
-                  <div key={d.label} className="border-t border-border pt-4">
-                    <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground block mb-1">
-                      {d.label}
-                    </span>
-                    <span className="text-[15px] font-light">{d.value}</span>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-6">
+              {projectDetails.map((d) => (
+                <div key={d.label} className="border-t border-border pt-4">
+                  <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground block mb-1">
+                    {d.label}
+                  </span>
+                  <span className="text-[15px] font-light">{d.value}</span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
