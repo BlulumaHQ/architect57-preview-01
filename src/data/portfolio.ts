@@ -214,7 +214,7 @@ export const allProjects: ProjectItem[] = [
     location: "Delta, BC",
     area: "6,078 sq. ft.",
     image: hanResidence01,
-    images: [hanResidence01],
+    images: [hanResidence01, hanResidence02, hanResidence03, hanResidence04, hanResidence05],
   },
   {
     slug: "severn-residence",
