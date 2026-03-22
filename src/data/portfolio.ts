@@ -102,6 +102,10 @@ import adore01 from "@/assets/adore-01.webp";
 import architect5701 from "@/assets/architect-57-01.webp";
 import architect5702 from "@/assets/architect-57-02.webp";
 import beresfordDoctorClinic01 from "@/assets/beresford_doctor_clinic-01.webp";
+import iglesiaNiCristoLocale02 from "@/assets/iglesia_ni_cristo_locale-02.webp";
+import laurelResidence02 from "@/assets/laurel-residence-02.webp";
+import littleMarines02 from "@/assets/little-marines-02.webp";
+import luResidence02 from "@/assets/lu-residence-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
