@@ -352,7 +352,7 @@ export const allProjects: ProjectItem[] = [
     area: "4,658 sq. ft.",
     budget: "$1.39 millions",
     image: seavale01,
-    images: [seavale01],
+    images: [seavale01, seavale02],
   },
 
   // ── COMMERCIAL ───────────────────────────────────────
