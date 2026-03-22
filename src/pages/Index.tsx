@@ -108,7 +108,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredProjects.map((p, i) => (
+            {featuredProjects.slice(0, 3).map((p, i) => (
               <ScrollReveal key={p.slug} delay={i * 70}>
                 <Link to={`/projects/${p.slug}`} className="group block relative overflow-hidden aspect-[4/3]">
                   <img

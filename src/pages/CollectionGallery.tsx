@@ -17,7 +17,7 @@ const CollectionGallery = () => {
         <div className="container-site">
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 text-[13px] tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors mb-10 block"
+            className="inline-flex items-center gap-2 text-[13px] tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors mb-10"
           >
             <ArrowLeft size={14} /> All Projects
           </Link>
@@ -38,7 +38,7 @@ const CollectionGallery = () => {
         <div className="container-site">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {collection.items.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
+              <ScrollReveal key={i} delay={i * 70}>
                 <div className="group overflow-hidden">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -50,10 +50,17 @@ const CollectionGallery = () => {
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500" />
                   </div>
                   <div className="pt-4 pb-2">
-                    <span className="text-[15px] font-light block">{item.title}</span>
+                    <span className="text-[15px] font-light block">
+                      {item.title}
+                    </span>
                     {item.location && (
-                      <span className="text-[13px] text-muted-foreground font-light">
+                      <span className="text-[13px] text-muted-foreground font-light block">
                         {item.location}
+                      </span>
+                    )}
+                    {item.meta && (
+                      <span className="text-[12px] text-muted-foreground/70 font-light block mt-0.5">
+                        {item.meta}
                       </span>
                     )}
                   </div>
