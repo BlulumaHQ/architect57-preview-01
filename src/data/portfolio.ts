@@ -109,6 +109,10 @@ import luResidence02 from "@/assets/lu-residence-02.webp";
 import morganPlay02 from "@/assets/morgan_play-02.webp";
 import morganPlay03 from "@/assets/morgan_play-03.webp";
 import no6Residence02 from "@/assets/no6-residence-02.webp";
+import phiEducation02 from "@/assets/phi-education-02.webp";
+import poLamTemple02 from "@/assets/po_lam_temple-02.webp";
+import rayacomSuperPrintFactory02 from "@/assets/rayacom_super_print_factory-02.webp";
+import royalOak02 from "@/assets/royal-oak-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
