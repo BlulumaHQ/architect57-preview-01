@@ -910,7 +910,7 @@ export function getRandomFeaturedProjects(count = 4): HomepageProject[] {
   // Pick one from each category until we have enough
   for (const cat of shuffledCats) {
     if (picked.length >= count) break;
-    const pool = projects.filter(
+    const pool = allProjects.filter(
       (p) => p.category === cat && !usedSlugs.has(p.slug)
     );
     if (pool.length === 0) continue;
