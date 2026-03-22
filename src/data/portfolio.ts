@@ -58,6 +58,18 @@ import cartierResidence01 from "@/assets/cartier-residence-01.webp";
 import laurelResidence01 from "@/assets/laurel-residence-01.webp";
 import treasureCoveCasino01 from "@/assets/treasure_cove_casino-01.webp";
 
+// Batch 5 uploaded project images
+import luResidence01 from "@/assets/lu-residence-01.webp";
+import poLamTemple01 from "@/assets/po_lam_temple-01.webp";
+import goldBuddhaMonastery01 from "@/assets/gold_buddha_monastery-01.webp";
+import iglesiaNiCristoLocale01 from "@/assets/iglesia_ni_cristo_locale-01.webp";
+import lutheranCommunityChurch01 from "@/assets/lutheran_community_church-01.webp";
+import ontarioStorageWarehouse01 from "@/assets/ontario_storage_warehouse-01.webp";
+import rayacomPremiumPrint01 from "@/assets/rayacom_premium_print-01.webp";
+import rayacomSuperPrintFactory01 from "@/assets/rayacom_super_print_factory-01.webp";
+import sunwinsSurgicalMask01 from "@/assets/sunwins_surgical_mask-01.webp";
+import trouwFrankieFeedMill01 from "@/assets/trouw_frankie_feed_mill-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
