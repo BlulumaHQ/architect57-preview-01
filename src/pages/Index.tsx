@@ -5,33 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
-import { featuredProjects, collections } from "@/data/portfolio";
-
-// Select diverse homepage projects across categories
-const getHomepageProjects = () => {
-  const seen = new Set<string>();
-  const selected: typeof featuredProjects = [];
-  // First pass: pick one from each unique category
-  for (const p of featuredProjects) {
-    if (!seen.has(p.category)) {
-      seen.add(p.category);
-      selected.push(p);
-    }
-    if (selected.length >= 6) break;
-  }
-  // Second pass: fill remaining slots if needed
-  if (selected.length < 6) {
-    for (const p of featuredProjects) {
-      if (!selected.includes(p)) {
-        selected.push(p);
-        if (selected.length >= 6) break;
-      }
-    }
-  }
-  return selected.slice(0, 6);
-};
-
-const homepageProjects = getHomepageProjects();
+import { homepageFeaturedProjects } from "@/data/portfolio";
 
 const heroSlides = [heroImage1, heroImage2];
 

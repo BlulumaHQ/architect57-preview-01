@@ -14,18 +14,16 @@ import srcProject12 from "@/assets/src-project-12.jpg";
 
 export type ProjectCategory =
   | "All"
-  | "Single Family"
-  | "Multi-Family / Office"
-  | "Multiplex"
-  | "Daycare / Education"
+  | "Residential"
+  | "Multi-Unit Housing"
+  | "Commercial & Industrial"
   | "Master Planning";
 
 export const projectCategories: ProjectCategory[] = [
   "All",
-  "Single Family",
-  "Multi-Family / Office",
-  "Multiplex",
-  "Daycare / Education",
+  "Residential",
+  "Multi-Unit Housing",
+  "Commercial & Industrial",
   "Master Planning",
 ];
 
@@ -56,18 +54,25 @@ export interface Collection {
   items: CollectionItem[];
 }
 
+export interface HomepageProject {
+  title: string;
+  category: string;
+  image: string;
+  link: string;
+}
+
 export const featuredProjects: FeaturedProject[] = [
   {
     slug: "chen-residence",
     title: "Chen Residence",
-    category: "Single Family",
+    category: "Residential",
     location: "West Vancouver, BC",
     description:
       "A distinguished custom residence set against the dramatic topography of West Vancouver. The design leverages natural grade changes to create layered living spaces with expansive views toward the ocean and mountains. Recognized as a finalist for the CHBA National Awards for Housing Excellence (formerly SAM Awards), the project represents a benchmark of residential design quality.",
     heroImage: srcProject1,
     images: [srcProject1, srcProject2, srcProject3],
     details: [
-      { label: "Category", value: "Single Family Residence" },
+      { label: "Category", value: "Residential" },
       { label: "Location", value: "West Vancouver, BC" },
       { label: "Area", value: "6,729 sq. ft." },
       { label: "Recognition", value: "CHBA National SAM Awards Finalist" },
@@ -77,14 +82,14 @@ export const featuredProjects: FeaturedProject[] = [
   {
     slug: "han-residence",
     title: "Han Residence",
-    category: "Single Family",
+    category: "Residential",
     location: "Delta, BC",
     description:
       "A generously proportioned family residence in Delta, designed in collaboration with interior designer John Han. The home balances contemporary form with warm materiality, creating spaces that feel both refined and inviting. Careful attention to interior-exterior continuity ensures seamless transitions between the living areas and the surrounding landscape.",
     heroImage: srcProject4,
     images: [srcProject4, srcProject5, srcProject6],
     details: [
-      { label: "Category", value: "Single Family Residence" },
+      { label: "Category", value: "Residential" },
       { label: "Location", value: "Delta, BC" },
       { label: "Area", value: "6,078 sq. ft." },
       { label: "Co-Designer", value: "John Han (Interior)" },
@@ -92,16 +97,47 @@ export const featuredProjects: FeaturedProject[] = [
     ],
   },
   {
+    slug: "severn-residence",
+    title: "Severn Residence",
+    category: "Residential",
+    location: "Richmond, BC",
+    description:
+      "A custom single-family residence in Richmond that embodies clean contemporary lines and thoughtful spatial planning. The design prioritizes natural light and flow between interior living spaces and outdoor areas, creating a home that feels open yet intimate.",
+    heroImage: srcProject2,
+    images: [srcProject2, srcProject3],
+    details: [
+      { label: "Category", value: "Residential" },
+      { label: "Location", value: "Richmond, BC" },
+      { label: "Services", value: "Integrated Design" },
+    ],
+  },
+  {
+    slug: "xu-residence",
+    title: "Xu Residence",
+    category: "Residential",
+    location: "Richmond, BC",
+    description:
+      "A refined single-family home in Richmond designed to maximize livable space within a considered footprint. The residence features a clean material palette and efficient spatial organization that reflects the owner's vision for modern, functional living.",
+    heroImage: srcProject5,
+    images: [srcProject5, srcProject6],
+    details: [
+      { label: "Category", value: "Residential" },
+      { label: "Location", value: "Richmond, BC" },
+      { label: "Area", value: "3,680 sq. ft." },
+      { label: "Services", value: "Integrated Design" },
+    ],
+  },
+  {
     slug: "bridgeport-office",
     title: "Bridgeport Office Building",
-    category: "Multi-Family / Office",
+    category: "Commercial & Industrial",
     location: "Richmond, BC",
     description:
       "A significant commercial office development in Richmond's Bridgeport district, designed to accommodate modern workplace needs within a refined architectural envelope. The building's massing responds to the urban context while maximizing efficient floor plates and natural light penetration across all levels.",
     heroImage: srcProject7,
     images: [srcProject7, srcProject8, srcProject9],
     details: [
-      { label: "Category", value: "Commercial Office" },
+      { label: "Category", value: "Commercial & Industrial" },
       { label: "Location", value: "Richmond, BC" },
       { label: "Area", value: "28,703 sq. ft." },
       { label: "Budget", value: "$10 million" },
@@ -111,14 +147,14 @@ export const featuredProjects: FeaturedProject[] = [
   {
     slug: "collingwood",
     title: "Collingwood",
-    category: "Multiplex",
+    category: "Multi-Unit Housing",
     location: "Vancouver, BC",
     description:
-      "A contemporary multiplex development in Vancouver's Collingwood neighbourhood, contributing thoughtfully to the area's increasing urban density. The design balances privacy between units with shared landscape amenity, creating a cohesive residential community within a compact urban footprint.",
+      "A contemporary multi-unit housing development in Vancouver's Collingwood neighbourhood, contributing thoughtfully to the area's increasing urban density. The design balances privacy between units with shared landscape amenity, creating a cohesive residential community within a compact urban footprint.",
     heroImage: srcProject10,
     images: [srcProject10, srcProject11],
     details: [
-      { label: "Category", value: "Multiplex" },
+      { label: "Category", value: "Multi-Unit Housing" },
       { label: "Location", value: "Vancouver, BC" },
       { label: "Area", value: "10,500 sq. ft." },
       { label: "Budget", value: "$5 million" },
@@ -126,47 +162,16 @@ export const featuredProjects: FeaturedProject[] = [
     ],
   },
   {
-    slug: "severn-residence",
-    title: "Severn Residence",
-    category: "Single Family",
-    location: "Richmond, BC",
-    description:
-      "A custom single-family residence in Richmond that embodies clean contemporary lines and thoughtful spatial planning. The design prioritizes natural light and flow between interior living spaces and outdoor areas, creating a home that feels open yet intimate.",
-    heroImage: srcProject2,
-    images: [srcProject2, srcProject3],
-    details: [
-      { label: "Category", value: "Single Family Residence" },
-      { label: "Location", value: "Richmond, BC" },
-      { label: "Services", value: "Integrated Design" },
-    ],
-  },
-  {
-    slug: "xu-residence",
-    title: "Xu Residence",
-    category: "Single Family",
-    location: "Richmond, BC",
-    description:
-      "A refined single-family home in Richmond designed to maximize livable space within a considered footprint. The residence features a clean material palette and efficient spatial organization that reflects the owner's vision for modern, functional living.",
-    heroImage: srcProject5,
-    images: [srcProject5, srcProject6],
-    details: [
-      { label: "Category", value: "Single Family Residence" },
-      { label: "Location", value: "Richmond, BC" },
-      { label: "Area", value: "3,680 sq. ft." },
-      { label: "Services", value: "Integrated Design" },
-    ],
-  },
-  {
     slug: "sqn-education",
     title: "SQN Education",
-    category: "Daycare / Education",
+    category: "Commercial & Industrial",
     location: "Richmond, BC",
     description:
       "A purpose-built educational facility in Richmond, designed to create nurturing and stimulating learning environments for young children. The project was developed in collaboration with ID Design Consulting Ltd., with Architect 57 providing code consultation and compliance services.",
     heroImage: srcProject12,
     images: [srcProject12, srcProject3],
     details: [
-      { label: "Category", value: "Daycare / Education" },
+      { label: "Category", value: "Commercial & Industrial" },
       { label: "Location", value: "Richmond, BC" },
       { label: "Designer", value: "ID Design Consulting Ltd." },
       { label: "Codes", value: "Architect 57 Inc." },
@@ -177,11 +182,11 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const collections: Collection[] = [
   {
-    slug: "single-family",
-    title: "Single Family",
-    category: "Single Family",
+    slug: "residential",
+    title: "Residential",
+    category: "Residential",
     description:
-      "A curated selection of custom single-family residences designed with contemporary sensibility and sensitivity to site, climate, and client aspiration.",
+      "A curated selection of custom residences designed with contemporary sensibility and sensitivity to site, climate, and client aspiration.",
     coverImage: srcProject4,
     items: [
       { image: srcProject1, title: "No6 Residence", location: "Richmond, BC" },
@@ -208,11 +213,11 @@ export const collections: Collection[] = [
     ],
   },
   {
-    slug: "multi-family-office",
-    title: "Multi-Family / Office",
-    category: "Multi-Family / Office",
+    slug: "multi-unit-housing",
+    title: "Multi-Unit Housing",
+    category: "Multi-Unit Housing",
     description:
-      "Commercial, high-rise, and mixed-use developments — from mid-rise condominiums to large-scale office buildings — designed for urban density and modern living.",
+      "High-rise, mid-rise, and townhouse developments designed for urban density, modern living, and community integration.",
     coverImage: srcProject7,
     items: [
       {
@@ -229,15 +234,15 @@ export const collections: Collection[] = [
       },
       {
         image: srcProject9,
-        title: "Wellington Mix-Use",
-        location: "Chilliwack, BC",
-        meta: "90,740 sq. ft. · Budget: $20 million",
-      },
-      {
-        image: srcProject4,
         title: "54th Ave Condo (4-Storey)",
         location: "Langley, BC",
         meta: "4-storey with underground parking",
+      },
+      {
+        image: srcProject4,
+        title: "Wellington Mix-Use",
+        location: "Chilliwack, BC",
+        meta: "90,740 sq. ft. · Budget: $20 million",
       },
       {
         image: srcProject10,
@@ -245,30 +250,20 @@ export const collections: Collection[] = [
         location: "Maple Ridge, BC",
         meta: "15 units (5 types)",
       },
-    ],
-  },
-  {
-    slug: "multiplex",
-    title: "Multiplex",
-    category: "Multiplex",
-    description:
-      "Contemporary multiplex and townhouse developments that contribute to urban density while maintaining livability, privacy, and architectural character.",
-    coverImage: srcProject10,
-    items: [
       {
-        image: srcProject10,
+        image: srcProject11,
         title: "Royal Oak",
         location: "Burnaby, BC",
         meta: "12,627 sq. ft. · Budget: $5.45 million",
       },
       {
-        image: srcProject11,
+        image: srcProject12,
         title: "West 39 Avenue",
         location: "Vancouver, BC",
         meta: "4,438 sq. ft. · Budget: $1.78 million",
       },
       {
-        image: srcProject12,
+        image: srcProject6,
         title: "Seavale",
         location: "Richmond, BC",
         meta: "4,658 sq. ft. · Budget: $1.39 million",
@@ -276,11 +271,11 @@ export const collections: Collection[] = [
     ],
   },
   {
-    slug: "daycare-education",
-    title: "Daycare / Education",
-    category: "Daycare / Education",
+    slug: "commercial-industrial",
+    title: "Commercial & Industrial",
+    category: "Commercial & Industrial",
     description:
-      "Purpose-built learning environments that nurture development through thoughtful spatial design, natural light, and safe, welcoming materials.",
+      "Educational facilities, institutional projects, and commercial developments — designed for function, compliance, and community impact.",
     coverImage: srcProject12,
     items: [
       { image: srcProject12, title: "East 2nd Avenue", location: "Vancouver, BC" },
@@ -320,5 +315,33 @@ export const collections: Collection[] = [
         meta: "570,000 sq. ft. (13.09 acres)",
       },
     ],
+  },
+];
+
+// Fixed curated homepage projects: one from each category
+export const homepageFeaturedProjects: HomepageProject[] = [
+  {
+    title: "Chen Residence",
+    category: "Residential",
+    image: srcProject1,
+    link: "/projects/chen-residence",
+  },
+  {
+    title: "Collingwood",
+    category: "Multi-Unit Housing",
+    image: srcProject10,
+    link: "/projects/collingwood",
+  },
+  {
+    title: "Bridgeport Office Building",
+    category: "Commercial & Industrial",
+    image: srcProject7,
+    link: "/projects/bridgeport-office",
+  },
+  {
+    title: "Zone 5, Union Bay Estate",
+    category: "Master Planning",
+    image: srcProject8,
+    link: "/projects/collection/master-planning",
   },
 ];
