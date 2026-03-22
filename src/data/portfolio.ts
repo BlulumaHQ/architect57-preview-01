@@ -365,7 +365,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Zone 5, Union Bay Estate",
     category: "Master Planning",
-    image: srcProject8,
+    image: zone5UnionBay01,
     link: "/projects/collection/master-planning",
   },
 ];
