@@ -115,8 +115,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "West Vancouver, BC",
     description:
       "A distinguished custom residence set against the dramatic topography of West Vancouver. The design leverages natural grade changes to create layered living spaces with expansive views toward the ocean and mountains. Recognized as a finalist for the CHBA National Awards for Housing Excellence (formerly SAM Awards), the project represents a benchmark of residential design quality.",
-    heroImage: srcProject1,
-    images: [srcProject1, srcProject2, srcProject3],
+    heroImage: chenResidence01,
+    images: [chenResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "West Vancouver, BC" },
