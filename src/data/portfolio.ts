@@ -498,7 +498,7 @@ export const allProjects: ProjectItem[] = [
     area: "48,756 sq. ft.",
     detail: "Designer: SSDG Interiors",
     image: greenlightInnovation01,
-    images: [greenlightInnovation01],
+    images: [greenlightInnovation01, greenlightInnovation02],
   },
   {
     slug: "corvus-energy-expansion",
