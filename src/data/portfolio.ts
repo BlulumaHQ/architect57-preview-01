@@ -113,6 +113,11 @@ import phiEducation02 from "@/assets/phi-education-02.webp";
 import poLamTemple02 from "@/assets/po_lam_temple-02.webp";
 import rayacomSuperPrintFactory02 from "@/assets/rayacom_super_print_factory-02.webp";
 import royalOak02 from "@/assets/royal-oak-02.webp";
+import seavale02 from "@/assets/seavale-02.webp";
+import severnResidence02 from "@/assets/severn-residence-02.webp";
+import severnResidence03 from "@/assets/severn-residence-03.webp";
+import sqnEducation02 from "@/assets/sqn-education-02.webp";
+import sqnEducation03 from "@/assets/sqn-education-03.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
@@ -234,7 +239,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Custom Home"],
     location: "Richmond, BC",
     image: severnResidence01,
-    images: [severnResidence01],
+    images: [severnResidence01, severnResidence02, severnResidence03],
   },
   {
     slug: "no6-residence",
@@ -347,7 +352,7 @@ export const allProjects: ProjectItem[] = [
     area: "4,658 sq. ft.",
     budget: "$1.39 millions",
     image: seavale01,
-    images: [seavale01],
+    images: [seavale01, seavale02],
   },
 
   // ── COMMERCIAL ───────────────────────────────────────
@@ -585,7 +590,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     detail: "Designer: ID Design Consulting Ltd.",
     image: sqnEducation01,
-    images: [sqnEducation01],
+    images: [sqnEducation01, sqnEducation02, sqnEducation03],
   },
   {
     slug: "phi-education",
