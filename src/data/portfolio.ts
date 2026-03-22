@@ -98,11 +98,11 @@ export const collections: Collection[] = [
     title: "Single Family",
     description:
       "A curated selection of custom single-family residences designed with contemporary sensibility and sensitivity to site context.",
-    coverImage: collSf1,
+    coverImage: srcProject10,
     items: [
-      { image: collSf1, title: "Cedar Ridge Residence", location: "Richmond, BC" },
-      { image: collSf2, title: "Stone House", location: "West Vancouver, BC" },
-      { image: collSf3, title: "Desert Court Home", location: "Richmond, BC" },
+      { image: srcProject10, title: "Cedar Ridge Residence", location: "Richmond, BC" },
+      { image: srcProject11, title: "Stone House", location: "West Vancouver, BC" },
+      { image: srcProject12, title: "Desert Court Home", location: "Richmond, BC" },
     ],
   },
   {
