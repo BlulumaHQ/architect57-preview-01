@@ -4,64 +4,39 @@ import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 import {
+  allProjects,
   featuredProjects,
-  collections,
   projectCategories,
   type ProjectCategory,
 } from "@/data/portfolio";
 
-// Build a unified list of ALL projects for the grid
-interface GridProject {
-  image: string;
-  title: string;
-  category: string;
-  location?: string;
-  link?: string; // detail page link for featured projects
-}
-
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("All");
+  const [activeTag, setActiveTag] = useState<string | null>(null);
 
   // Top 3 featured projects (fixed, not filtered)
   const topFeatured = featuredProjects.slice(0, 3);
 
-  // All projects: featured + collection items merged
-  const allProjects = useMemo<GridProject[]>(() => {
-    const projects: GridProject[] = [];
-
-    // Add featured projects
-    featuredProjects.forEach((p) => {
-      projects.push({
-        image: p.heroImage,
-        title: p.title,
-        category: p.category,
-        location: p.location,
-        link: `/projects/${p.slug}`,
-      });
-    });
-
-    // Add collection items (skip duplicates that are already featured)
-    const featuredTitles = new Set(featuredProjects.map((p) => p.title));
-    collections.forEach((col) => {
-      col.items.forEach((item) => {
-        if (!featuredTitles.has(item.title)) {
-          projects.push({
-            image: item.image,
-            title: item.title,
-            category: col.category,
-            location: item.location,
-          });
-        }
-      });
-    });
-
-    return projects;
-  }, []);
-
-  const filteredProjects =
-    activeFilter === "All"
+  // Collect unique tags from visible projects
+  const availableTags = useMemo(() => {
+    const filtered = activeFilter === "All"
       ? allProjects
       : allProjects.filter((p) => p.category === activeFilter);
+    const tagSet = new Set<string>();
+    filtered.forEach((p) => p.tags.forEach((t) => tagSet.add(t)));
+    return Array.from(tagSet).sort();
+  }, [activeFilter]);
+
+  const filteredProjects = useMemo(() => {
+    let projects = allProjects;
+    if (activeFilter !== "All") {
+      projects = projects.filter((p) => p.category === activeFilter);
+    }
+    if (activeTag) {
+      projects = projects.filter((p) => p.tags.includes(activeTag));
+    }
+    return projects;
+  }, [activeFilter, activeTag]);
 
   return (
     <Layout>
@@ -101,7 +76,7 @@ const Projects = () => {
                 >
                   <div className="relative overflow-hidden aspect-[4/3]">
                     <img
-                      src={project.heroImage}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                       loading="lazy"
@@ -116,7 +91,7 @@ const Projects = () => {
                       {project.title}
                     </h2>
                     <span className="text-[12px] text-muted-foreground font-light mt-1 block">
-                      {project.category} — {project.location}
+                      {project.category}{project.location ? ` — ${project.location}` : ""}
                     </span>
                   </div>
                 </Link>
@@ -140,11 +115,15 @@ const Projects = () => {
                 All Projects
               </span>
             </div>
+            {/* Main Category Filter */}
             <div className="flex flex-wrap gap-2">
               {projectCategories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveFilter(cat)}
+                  onClick={() => {
+                    setActiveFilter(cat);
+                    setActiveTag(null);
+                  }}
                   className={`text-[12px] tracking-[0.08em] uppercase px-5 py-2.5 border transition-all duration-300 active:scale-[0.97] ${
                     activeFilter === cat
                       ? "border-foreground bg-foreground text-background"
@@ -155,6 +134,34 @@ const Projects = () => {
                 </button>
               ))}
             </div>
+            {/* Tag Filter (secondary) */}
+            {availableTags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                <button
+                  onClick={() => setActiveTag(null)}
+                  className={`text-[11px] tracking-[0.06em] px-3.5 py-1.5 rounded-full border transition-all duration-300 active:scale-[0.97] ${
+                    activeTag === null
+                      ? "border-foreground/40 bg-foreground/10 text-foreground"
+                      : "border-foreground/10 text-muted-foreground hover:border-foreground/25 hover:text-foreground"
+                  }`}
+                >
+                  All Tags
+                </button>
+                {availableTags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => setActiveTag(tag)}
+                    className={`text-[11px] tracking-[0.06em] px-3.5 py-1.5 rounded-full border transition-all duration-300 active:scale-[0.97] ${
+                      activeTag === tag
+                        ? "border-foreground/40 bg-foreground/10 text-foreground"
+                        : "border-foreground/10 text-muted-foreground hover:border-foreground/25 hover:text-foreground"
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            )}
           </ScrollReveal>
         </div>
       </section>
@@ -165,13 +172,14 @@ const Projects = () => {
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {filteredProjects.map((project, i) => {
-                const CardWrapper = project.link ? Link : "div";
-                const cardProps = project.link
-                  ? { to: project.link }
+                const hasDetail = project.isFeatured;
+                const CardWrapper = hasDetail ? Link : "div";
+                const cardProps = hasDetail
+                  ? { to: `/projects/${project.slug}` }
                   : {};
 
                 return (
-                  <ScrollReveal key={`${project.title}-${i}`} delay={i * 50}>
+                  <ScrollReveal key={`${project.slug}-${i}`} delay={i * 50}>
                     <CardWrapper
                       {...(cardProps as any)}
                       className="group block"
@@ -184,7 +192,7 @@ const Projects = () => {
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500" />
-                        {project.link && (
+                        {hasDetail && (
                           <div className="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             <ArrowRight size={16} className="text-white" />
                           </div>
@@ -195,8 +203,8 @@ const Projects = () => {
                           {project.title}
                         </h3>
                         <span className="text-[11px] text-muted-foreground font-light mt-0.5 block">
-                          {project.category}
-                          {project.location ? ` — ${project.location}` : ""}
+                          {project.location || ""}
+                          {project.area ? ` · ${project.area}` : ""}
                         </span>
                       </div>
                     </CardWrapper>
@@ -207,10 +215,13 @@ const Projects = () => {
           ) : (
             <div className="text-center py-24">
               <p className="text-muted-foreground text-lg font-light">
-                No projects in this category yet.
+                No projects match this filter.
               </p>
               <button
-                onClick={() => setActiveFilter("All")}
+                onClick={() => {
+                  setActiveFilter("All");
+                  setActiveTag(null);
+                }}
                 className="mt-6 text-[13px] tracking-[0.1em] uppercase text-foreground underline underline-offset-4 hover:no-underline transition-all"
               >
                 View All Projects
