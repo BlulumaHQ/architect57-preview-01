@@ -680,7 +680,7 @@ export const allProjects: ProjectItem[] = [
     area: "27,340 sf",
     budget: "$19 millions",
     image: poLamTemple01,
-    images: [poLamTemple01],
+    images: [poLamTemple01, poLamTemple02],
   },
   {
     slug: "lutheran-community-church",
