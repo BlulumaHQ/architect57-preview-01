@@ -10,6 +10,7 @@ import phiEducation01 from "@/assets/phi-education-01.webp";
 import sqnEducation01 from "@/assets/sqn-education-01.webp";
 import torakeJapaneseCuisine01 from "@/assets/torake-japanese-cuisine-01.webp";
 import bridgeportHotel01 from "@/assets/bridgeport-hotel-01.webp";
+import bridgeportHotel03 from "@/assets/bridgeport-hotel-03.webp";
 import ramenOneBroadway01 from "@/assets/ramen-one-broadway-01.webp";
 import sushiKiwami01 from "@/assets/sushi-kiwami-01.webp";
 import applianceCanada01 from "@/assets/appliance_canada-01.webp";
