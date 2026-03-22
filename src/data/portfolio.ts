@@ -122,11 +122,11 @@ export const collections: Collection[] = [
     title: "Multiplex",
     description:
       "Contemporary multiplex and townhouse developments that contribute to urban density while maintaining livability, privacy, and architectural character.",
-    coverImage: collMp1,
+    coverImage: srcProject2,
     items: [
-      { image: collMp1, title: "Granville Terrace", location: "Vancouver, BC" },
-      { image: collMp2, title: "Cambie Row", location: "Vancouver, BC" },
-      { image: collMp3, title: "Oak Street Duplex", location: "Richmond, BC" },
+      { image: srcProject2, title: "Granville Terrace", location: "Vancouver, BC" },
+      { image: srcProject5, title: "Cambie Row", location: "Vancouver, BC" },
+      { image: srcProject8, title: "Oak Street Duplex", location: "Richmond, BC" },
     ],
   },
 ];
