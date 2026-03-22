@@ -5,33 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
-import { featuredProjects, collections } from "@/data/portfolio";
-
-// Select diverse homepage projects across categories
-const getHomepageProjects = () => {
-  const seen = new Set<string>();
-  const selected: typeof featuredProjects = [];
-  // First pass: pick one from each unique category
-  for (const p of featuredProjects) {
-    if (!seen.has(p.category)) {
-      seen.add(p.category);
-      selected.push(p);
-    }
-    if (selected.length >= 6) break;
-  }
-  // Second pass: fill remaining slots if needed
-  if (selected.length < 6) {
-    for (const p of featuredProjects) {
-      if (!selected.includes(p)) {
-        selected.push(p);
-        if (selected.length >= 6) break;
-      }
-    }
-  }
-  return selected.slice(0, 6);
-};
-
-const homepageProjects = getHomepageProjects();
+import { homepageFeaturedProjects } from "@/data/portfolio";
 
 const heroSlides = [heroImage1, heroImage2];
 
@@ -133,12 +107,12 @@ const Index = () => {
               <h2 className="mt-4 text-balance">Projects</h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {homepageProjects.map((p, i) => (
-              <ScrollReveal key={p.slug} delay={i * 70}>
-                <Link to={`/projects/${p.slug}`} className="group block relative overflow-hidden aspect-[4/3]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {homepageFeaturedProjects.map((p, i) => (
+              <ScrollReveal key={p.title} delay={i * 70}>
+                <Link to={p.link} className="group block relative overflow-hidden aspect-[4/3]">
                   <img
-                    src={p.heroImage}
+                    src={p.image}
                     alt={p.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     loading="lazy"
