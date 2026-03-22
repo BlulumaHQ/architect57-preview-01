@@ -132,8 +132,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Delta, BC",
     description:
       "A generously proportioned family residence in Delta, designed in collaboration with interior designer John Han. The home balances contemporary form with warm materiality, creating spaces that feel both refined and inviting. Careful attention to interior-exterior continuity ensures seamless transitions between the living areas and the surrounding landscape.",
-    heroImage: srcProject4,
-    images: [srcProject4, srcProject5, srcProject6],
+    heroImage: hanResidence01,
+    images: [hanResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "Delta, BC" },
