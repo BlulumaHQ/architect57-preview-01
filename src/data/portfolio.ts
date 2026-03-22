@@ -543,7 +543,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "43,601 sq. ft.",
     image: herbalandNewProduction01,
-    images: [herbalandNewProduction01],
+    images: [herbalandNewProduction01, herbalandNewProduction02],
   },
   {
     slug: "hazco-environmental-transfer",
