@@ -109,6 +109,10 @@ import luResidence02 from "@/assets/lu-residence-02.webp";
 import morganPlay02 from "@/assets/morgan_play-02.webp";
 import morganPlay03 from "@/assets/morgan_play-03.webp";
 import no6Residence02 from "@/assets/no6-residence-02.webp";
+import phiEducation02 from "@/assets/phi-education-02.webp";
+import poLamTemple02 from "@/assets/po_lam_temple-02.webp";
+import rayacomSuperPrintFactory02 from "@/assets/rayacom_super_print_factory-02.webp";
+import royalOak02 from "@/assets/royal-oak-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
@@ -321,7 +325,7 @@ export const allProjects: ProjectItem[] = [
     area: "12,627 sq. ft.",
     budget: "$5.45 millions",
     image: royalOak01,
-    images: [royalOak01],
+    images: [royalOak01, royalOak02],
   },
   {
     slug: "west-39-avenue",
@@ -458,7 +462,7 @@ export const allProjects: ProjectItem[] = [
     location: "Vancouver, BC",
     area: "128,285 sq. ft.",
     image: rayacomSuperPrintFactory01,
-    images: [rayacomSuperPrintFactory01],
+    images: [rayacomSuperPrintFactory01, rayacomSuperPrintFactory02],
   },
   {
     slug: "trouw-frankie-feed-mill",
@@ -590,7 +594,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Education"],
     location: "Vancouver, BC",
     image: phiEducation01,
-    images: [phiEducation01],
+    images: [phiEducation01, phiEducation02],
   },
   {
     slug: "little-marines-preschool",
@@ -676,7 +680,7 @@ export const allProjects: ProjectItem[] = [
     area: "27,340 sf",
     budget: "$19 millions",
     image: poLamTemple01,
-    images: [poLamTemple01],
+    images: [poLamTemple01, poLamTemple02],
   },
   {
     slug: "lutheran-community-church",
