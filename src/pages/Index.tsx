@@ -108,11 +108,11 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {projects.map((p, i) => (
-              <ScrollReveal key={p.title} delay={i * 70}>
-                <Link to="/projects" className="group block relative overflow-hidden aspect-[4/3]">
+            {featuredProjects.map((p, i) => (
+              <ScrollReveal key={p.slug} delay={i * 70}>
+                <Link to={`/projects/${p.slug}`} className="group block relative overflow-hidden aspect-[4/3]">
                   <img
-                    src={p.img}
+                    src={p.heroImage}
                     alt={p.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     loading="lazy"
