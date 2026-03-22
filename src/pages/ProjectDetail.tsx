@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { allProjects } from "@/data/portfolio";
@@ -37,6 +38,10 @@ const ProjectDetail = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title={`${project.title} | Architect 57 無極建築`}
+        description={`${project.title}${project.location ? ` in ${project.location}` : ""} — ${project.category.toLowerCase()} project by Architect 57 Inc.${project.area ? `, ${project.area}` : ""}${project.detail ? `. ${project.detail}` : "."}`}
+      />
       {/* Hero */}
       <section className="relative h-[60vh] md:h-[75vh] overflow-hidden">
         <img

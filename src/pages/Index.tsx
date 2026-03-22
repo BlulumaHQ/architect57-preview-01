@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -34,6 +35,10 @@ const Index = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title="Architect 57 無極建築 | Integrated Design Build | Richmond, BC"
+        description="Architect 57 Inc. delivers integrated building design, complex code consultation, BIM coordination, and sustainable architecture across Metro Vancouver and beyond."
+      />
       {/* Hero Slideshow */}
       <section className="relative h-screen overflow-hidden">
         {heroSlides.map((slide, i) => (

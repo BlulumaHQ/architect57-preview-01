@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 import {
@@ -46,6 +47,10 @@ const Projects = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title="Projects | Architect 57 無極建築"
+        description="Explore the portfolio of Architect 57 Inc. — residential, commercial, industrial, and institutional projects delivered with integrated design-build expertise."
+      />
       {/* Hero */}
       <section className="pt-36 pb-16 md:pt-44 md:pb-24">
         <div className="container-site">

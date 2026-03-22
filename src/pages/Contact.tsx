@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
 import { Mail } from "lucide-react";
@@ -16,6 +17,10 @@ const Contact = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title="Contact | Architect 57 無極建築"
+        description="Reach out to Architect 57 Inc. for project inquiries, consultations, and collaboration opportunities. Based in Richmond, BC, serving Metro Vancouver and beyond."
+      />
       {/* Hero */}
       <section className="pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="container-site">

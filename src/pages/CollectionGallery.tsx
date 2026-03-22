@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft } from "lucide-react";
 import { allProjects, projectCategories, type ProjectCategory } from "@/data/portfolio";
@@ -20,6 +21,10 @@ const CollectionGallery = () => {
 
   return (
     <Layout>
+      <PageMeta
+        title={`${category} Projects | Architect 57 無極建築`}
+        description={`Browse ${category.toLowerCase()} projects by Architect 57 Inc. — ${categoryProjects.length} projects showcasing integrated design-build expertise in ${category.toLowerCase()} architecture.`}
+      />
       {/* Hero */}
       <section className="pt-36 pb-16 md:pt-44 md:pb-20">
         <div className="container-site">
