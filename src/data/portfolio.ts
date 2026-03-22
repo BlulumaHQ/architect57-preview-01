@@ -12,6 +12,7 @@ import torakeJapaneseCuisine01 from "@/assets/torake-japanese-cuisine-01.webp";
 import bridgeportHotel01 from "@/assets/bridgeport-hotel-01.webp";
 import ramenOneBroadway01 from "@/assets/ramen-one-broadway-01.webp";
 import sushiKiwami01 from "@/assets/sushi-kiwami-01.webp";
+import applianceCanada01 from "@/assets/appliance_canada-01.webp";
 
 // Real uploaded project images
 import austinHighRise01 from "@/assets/austin_high-rise-01.webp";
