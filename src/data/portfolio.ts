@@ -653,7 +653,7 @@ export const allProjects: ProjectItem[] = [
     area: "33,034 sq. ft.",
     detail: "Design architect: DYS Architecture; Building permit architect: Architect 57",
     image: goldBuddhaMonastery01,
-    images: [goldBuddhaMonastery01],
+    images: [goldBuddhaMonastery01, goldBuddhaMonastery02, goldBuddhaMonastery03],
   },
   {
     slug: "po-lam-temple",
