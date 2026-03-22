@@ -261,7 +261,7 @@ export const collections: Collection[] = [
         meta: "6,733 sq. ft.",
       },
       {
-        image: srcProject6,
+        image: luResidence01,
         title: "Lu Residence",
         location: "Delta, BC",
         meta: "5,177 sq. ft.",
