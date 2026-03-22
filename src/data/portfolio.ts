@@ -292,7 +292,7 @@ export const allProjects: ProjectItem[] = [
     area: "10,500 sq. ft.",
     budget: "$5 millions",
     image: collingwood01,
-    images: [collingwood01],
+    images: [collingwood01, collingwood02, collingwood03, collingwood04, collingwood05, collingwood06],
   },
   {
     slug: "royal-oak",
