@@ -107,12 +107,12 @@ const Index = () => {
               <h2 className="mt-4 text-balance">Projects</h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {homepageProjects.map((p, i) => (
-              <ScrollReveal key={p.slug} delay={i * 70}>
-                <Link to={`/projects/${p.slug}`} className="group block relative overflow-hidden aspect-[4/3]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {homepageFeaturedProjects.map((p, i) => (
+              <ScrollReveal key={p.title} delay={i * 70}>
+                <Link to={p.link} className="group block relative overflow-hidden aspect-[4/3]">
                   <img
-                    src={p.heroImage}
+                    src={p.image}
                     alt={p.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     loading="lazy"
