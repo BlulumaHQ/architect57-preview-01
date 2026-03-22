@@ -235,15 +235,15 @@ export const collections: Collection[] = [
       "A curated selection of custom residences designed with contemporary sensibility and sensitivity to site, climate, and client aspiration.",
     coverImage: srcProject4,
     items: [
-      { image: srcProject1, title: "No6 Residence", location: "Richmond, BC" },
+      { image: no6Residence01, title: "No6 Residence", location: "Richmond, BC" },
       {
-        image: srcProject2,
+        image: vinsonCreekResidence01,
         title: "Vinson Creek Residence",
         location: "West Vancouver, BC",
         meta: "Co-Designer: Angel Wang · 9,343 sq. ft.",
       },
       {
-        image: srcProject5,
+        image: wuResidence01,
         title: "Wu Residence",
         location: "West Vancouver, BC",
         meta: "6,733 sq. ft.",
@@ -254,8 +254,8 @@ export const collections: Collection[] = [
         location: "Delta, BC",
         meta: "5,177 sq. ft.",
       },
-      { image: srcProject11, title: "Cartier Residence", location: "Vancouver, BC" },
-      { image: srcProject3, title: "Laurel Residence", location: "Vancouver, BC" },
+      { image: cartierResidence01, title: "Cartier Residence", location: "Vancouver, BC" },
+      { image: laurelResidence01, title: "Laurel Residence", location: "Vancouver, BC" },
     ],
   },
   {
