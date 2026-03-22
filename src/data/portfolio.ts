@@ -578,7 +578,7 @@ export const allProjects: ProjectItem[] = [
     category: "Institutional",
     tags: ["Education"],
     location: "Vancouver, BC",
-    image: srcProject3,
+    image: phiEducation01,
   },
   {
     slug: "little-marines-preschool",
