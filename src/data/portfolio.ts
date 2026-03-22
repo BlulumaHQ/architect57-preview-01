@@ -75,6 +75,8 @@ import hazcoEnvironmentalWaste01 from "@/assets/hazco_environmental_waste-01.web
 
 import atlasPowerTechnologies01 from "@/assets/atlas_power_technologies-01.webp";
 import brightwaySeafood01 from "@/assets/brightway_cfia_seafood-01.webp";
+import brightwaySeafood02 from "@/assets/brightway_cfia_seafood-02.webp";
+import brightwaySeafood03 from "@/assets/brightway_cfia_seafood-03.webp";
 import corvusEnergyExpansion01 from "@/assets/corvus_energy_expansion-01.webp";
 import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
