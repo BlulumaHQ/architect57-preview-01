@@ -926,7 +926,7 @@ export function getRandomFeaturedProjects(count = 4): HomepageProject[] {
 
   // If still short, fill from remaining
   if (picked.length < count) {
-    const remaining = projects.filter((p) => !usedSlugs.has(p.slug));
+    const remaining = allProjects.filter((p) => !usedSlugs.has(p.slug));
     const shuffled = remaining.sort(() => Math.random() - 0.5);
     for (const proj of shuffled) {
       if (picked.length >= count) break;
