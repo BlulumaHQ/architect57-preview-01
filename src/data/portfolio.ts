@@ -5,6 +5,9 @@ import lionsTravel01 from "@/assets/lions_travel-01.webp";
 import tecoOffice01 from "@/assets/teco_office-01.webp";
 import titanicExhibition01 from "@/assets/titanic_exhibition-01.webp";
 import east2ndAve01 from "@/assets/east-2nd-ave-01.webp";
+import east2ndAve02 from "@/assets/east-2nd-ave-02.webp";
+import east2ndAve03 from "@/assets/east-2nd-ave-03.webp";
+import east2ndAve04 from "@/assets/east-2nd-ave-04.webp";
 import happyMay01 from "@/assets/happy-may-01.webp";
 import littleMarines01 from "@/assets/little-marines-01.webp";
 import phiEducation01 from "@/assets/phi-education-01.webp";
@@ -69,6 +72,8 @@ import luResidence01 from "@/assets/lu-residence-01.webp";
 
 import poLamTemple01 from "@/assets/po_lam_temple-01.webp";
 import goldBuddhaMonastery01 from "@/assets/gold_buddha_monastery-01.webp";
+import goldBuddhaMonastery02 from "@/assets/gold_buddha_monastery-02.webp";
+import goldBuddhaMonastery03 from "@/assets/gold_buddha_monastery-03.webp";
 import iglesiaNiCristoLocale01 from "@/assets/iglesia_ni_cristo_locale-01.webp";
 import lutheranCommunityChurch01 from "@/assets/lutheran_community_church-01.webp";
 import ontarioStorageWarehouse01 from "@/assets/ontario_storage_warehouse-01.webp";
@@ -86,6 +91,7 @@ import brightwaySeafood03 from "@/assets/brightway_cfia_seafood-03.webp";
 import corvusEnergyExpansion01 from "@/assets/corvus_energy_expansion-01.webp";
 import corvusEnergyExpansion02 from "@/assets/corvus_energy_expansion-02.webp";
 import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
+import greenlightInnovation02 from "@/assets/greenlight_innovation-02.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
 import adore01 from "@/assets/adore-01.webp";
 import architect5701 from "@/assets/architect-57-01.webp";
@@ -492,7 +498,7 @@ export const allProjects: ProjectItem[] = [
     area: "48,756 sq. ft.",
     detail: "Designer: SSDG Interiors",
     image: greenlightInnovation01,
-    images: [greenlightInnovation01],
+    images: [greenlightInnovation01, greenlightInnovation02],
   },
   {
     slug: "corvus-energy-expansion",
@@ -553,7 +559,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Daycare"],
     location: "Vancouver, BC",
     image: east2ndAve01,
-    images: [east2ndAve01],
+    images: [east2ndAve01, east2ndAve02, east2ndAve03, east2ndAve04],
   },
   {
     slug: "sqn-education",
@@ -647,7 +653,7 @@ export const allProjects: ProjectItem[] = [
     area: "33,034 sq. ft.",
     detail: "Design architect: DYS Architecture; Building permit architect: Architect 57",
     image: goldBuddhaMonastery01,
-    images: [goldBuddhaMonastery01],
+    images: [goldBuddhaMonastery01, goldBuddhaMonastery02, goldBuddhaMonastery03],
   },
   {
     slug: "po-lam-temple",
