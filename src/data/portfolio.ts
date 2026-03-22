@@ -47,8 +47,8 @@ export const featuredProjects: FeaturedProject[] = [
     year: "2023",
     description:
       "A striking commercial pavilion defined by its transparent glass envelope, inviting natural light deep into the workspace. The design balances openness with thermal performance through a high-efficiency curtain wall system and passive ventilation strategy.",
-    heroImage: projectImg1,
-    images: [projectImg1, featuredGlass2, featuredGlass3],
+    heroImage: srcProject1,
+    images: [srcProject1, srcProject2, srcProject3],
     details: [
       { label: "Typology", value: "Commercial Office" },
       { label: "Area", value: "18,400 sq ft" },
