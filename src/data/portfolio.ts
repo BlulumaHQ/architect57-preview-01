@@ -422,7 +422,7 @@ export const allProjects: ProjectItem[] = [
     category: "Commercial",
     tags: ["Restaurant"],
     location: "Richmond, BC",
-    image: srcProject9,
+    image: torakeJapaneseCuisine01,
   },
   {
     slug: "ramen-one-on-broadway",
