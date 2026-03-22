@@ -118,6 +118,12 @@ import severnResidence02 from "@/assets/severn-residence-02.webp";
 import severnResidence03 from "@/assets/severn-residence-03.webp";
 import sqnEducation02 from "@/assets/sqn-education-02.webp";
 import sqnEducation03 from "@/assets/sqn-education-03.webp";
+import sushiKiwami02 from "@/assets/sushi-kiwami-02.webp";
+import sushiKiwami03 from "@/assets/sushi-kiwami-03.webp";
+import sushiKiwami04 from "@/assets/sushi-kiwami-04.webp";
+import sushiKiwami05 from "@/assets/sushi-kiwami-05.webp";
+import torakeJapaneseCuisine02 from "@/assets/torake-japanese-cuisine-02.webp";
+import titanicExhibition02 from "@/assets/titanic_exhibition-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
@@ -427,7 +433,7 @@ export const allProjects: ProjectItem[] = [
     area: "2,415 sq. ft.",
     budget: "$1 million",
     image: sushiKiwami01,
-    images: [sushiKiwami01],
+    images: [sushiKiwami01, sushiKiwami02, sushiKiwami03, sushiKiwami04, sushiKiwami05],
   },
   {
     slug: "torake-japanese-cuisine",
@@ -436,7 +442,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Restaurant"],
     location: "Richmond, BC",
     image: torakeJapaneseCuisine01,
-    images: [torakeJapaneseCuisine01],
+    images: [torakeJapaneseCuisine01, torakeJapaneseCuisine02],
   },
   {
     slug: "ramen-one-on-broadway",
@@ -796,7 +802,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "15,801 sq. ft.",
     image: titanicExhibition01,
-    images: [titanicExhibition01],
+    images: [titanicExhibition01, titanicExhibition02],
   },
   {
     slug: "beresford-doctor-clinic",
