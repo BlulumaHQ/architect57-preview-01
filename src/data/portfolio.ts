@@ -439,7 +439,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Hotel"],
     location: "Richmond, BC",
     detail: "Design architect: GBL Architects",
-    image: srcProject6,
+    image: torakeJapaneseCuisine01,
   },
 
   // ── INDUSTRIAL ───────────────────────────────────────
