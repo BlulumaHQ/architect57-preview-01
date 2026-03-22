@@ -106,6 +106,9 @@ import iglesiaNiCristoLocale02 from "@/assets/iglesia_ni_cristo_locale-02.webp";
 import laurelResidence02 from "@/assets/laurel-residence-02.webp";
 import littleMarines02 from "@/assets/little-marines-02.webp";
 import luResidence02 from "@/assets/lu-residence-02.webp";
+import morganPlay02 from "@/assets/morgan_play-02.webp";
+import morganPlay03 from "@/assets/morgan_play-03.webp";
+import no6Residence02 from "@/assets/no6-residence-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
