@@ -690,7 +690,7 @@ export const allProjects: ProjectItem[] = [
     area: "10,964 sf",
     detail: "Exterior envelope replacement and interior renovation",
     image: iglesiaNiCristoLocale01,
-    images: [iglesiaNiCristoLocale01],
+    images: [iglesiaNiCristoLocale01, iglesiaNiCristoLocale02],
   },
   {
     slug: "treasure-cove-casino",
