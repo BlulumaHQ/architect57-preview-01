@@ -1,24 +1,16 @@
-// Featured project images
-import projectImg1 from "@/assets/project-1.jpg";
-import featuredGlass2 from "@/assets/featured-glass-2.jpg";
-import featuredGlass3 from "@/assets/featured-glass-3.jpg";
-import projectImg2 from "@/assets/project-2.jpg";
-import featuredHarbour2 from "@/assets/featured-harbour-2.jpg";
-import featuredHarbour3 from "@/assets/featured-harbour-3.jpg";
-import projectImg4 from "@/assets/project-4.jpg";
-import featuredUnion2 from "@/assets/featured-union-2.jpg";
-import featuredUnion3 from "@/assets/featured-union-3.jpg";
-
-// Collection images
-import collSf1 from "@/assets/collection-sf-1.jpg";
-import collSf2 from "@/assets/collection-sf-2.jpg";
-import collSf3 from "@/assets/collection-sf-3.jpg";
-import collDc1 from "@/assets/collection-dc-1.jpg";
-import collDc2 from "@/assets/collection-dc-2.jpg";
-import collDc3 from "@/assets/collection-dc-3.jpg";
-import collMp1 from "@/assets/collection-mp-1.jpg";
-import collMp2 from "@/assets/collection-mp-2.jpg";
-import collMp3 from "@/assets/collection-mp-3.jpg";
+// Source project images from architect57.com
+import srcProject1 from "@/assets/src-project-1.jpg";
+import srcProject2 from "@/assets/src-project-2.jpg";
+import srcProject3 from "@/assets/src-project-3.jpg";
+import srcProject4 from "@/assets/src-project-4.jpg";
+import srcProject5 from "@/assets/src-project-5.jpg";
+import srcProject6 from "@/assets/src-project-6.jpg";
+import srcProject7 from "@/assets/src-project-7.jpg";
+import srcProject8 from "@/assets/src-project-8.jpg";
+import srcProject9 from "@/assets/src-project-9.jpg";
+import srcProject10 from "@/assets/src-project-10.jpg";
+import srcProject11 from "@/assets/src-project-11.jpg";
+import srcProject12 from "@/assets/src-project-12.jpg";
 
 export interface FeaturedProject {
   slug: string;
