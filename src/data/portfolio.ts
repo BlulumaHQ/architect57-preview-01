@@ -726,7 +726,7 @@ export const allProjects: ProjectItem[] = [
     area: "15,326 sq. ft.",
     budget: "$15 millions",
     image: treasureCoveCasino01,
-    images: [treasureCoveCasino01],
+    images: [treasureCoveCasino01, treasureCoveCasino02],
   },
   {
     slug: "atomic-fitness",
