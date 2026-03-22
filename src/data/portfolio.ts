@@ -595,7 +595,7 @@ export const allProjects: ProjectItem[] = [
     category: "Institutional",
     tags: ["Daycare"],
     location: "Richmond, BC",
-    image: srcProject9,
+    image: happyMay01,
   },
   {
     slug: "katalin-care-homes",
