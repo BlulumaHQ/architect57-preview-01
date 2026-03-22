@@ -102,6 +102,10 @@ import adore01 from "@/assets/adore-01.webp";
 import architect5701 from "@/assets/architect-57-01.webp";
 import architect5702 from "@/assets/architect-57-02.webp";
 import beresfordDoctorClinic01 from "@/assets/beresford_doctor_clinic-01.webp";
+import iglesiaNiCristoLocale02 from "@/assets/iglesia_ni_cristo_locale-02.webp";
+import laurelResidence02 from "@/assets/laurel-residence-02.webp";
+import littleMarines02 from "@/assets/little-marines-02.webp";
+import luResidence02 from "@/assets/lu-residence-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
@@ -272,7 +276,7 @@ export const allProjects: ProjectItem[] = [
     location: "Delta, BC",
     area: "5,177 sq. ft.",
     image: luResidence01,
-    images: [luResidence01],
+    images: [luResidence01, luResidence02],
   },
   {
     slug: "cartier-residence",
@@ -290,7 +294,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Custom Home"],
     location: "Vancouver, BC",
     image: laurelResidence01,
-    images: [laurelResidence01],
+    images: [laurelResidence01, laurelResidence02],
   },
 
   // ── RESIDENTIAL — Multiplex ──────────────────────────
@@ -593,7 +597,7 @@ export const allProjects: ProjectItem[] = [
     location: "Coquitlam, BC",
     detail: "Designer: Yan Design Studio",
     image: littleMarines01,
-    images: [littleMarines01],
+    images: [littleMarines01, littleMarines02],
   },
   {
     slug: "happy-may-iv",
@@ -690,7 +694,7 @@ export const allProjects: ProjectItem[] = [
     area: "10,964 sf",
     detail: "Exterior envelope replacement and interior renovation",
     image: iglesiaNiCristoLocale01,
-    images: [iglesiaNiCristoLocale01],
+    images: [iglesiaNiCristoLocale01, iglesiaNiCristoLocale02],
   },
   {
     slug: "treasure-cove-casino",
