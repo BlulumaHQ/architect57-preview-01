@@ -290,7 +290,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Custom Home"],
     location: "Vancouver, BC",
     image: laurelResidence01,
-    images: [laurelResidence01],
+    images: [laurelResidence01, laurelResidence02],
   },
 
   // ── RESIDENTIAL — Multiplex ──────────────────────────
