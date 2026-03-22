@@ -559,7 +559,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Daycare"],
     location: "Vancouver, BC",
     image: east2ndAve01,
-    images: [east2ndAve01],
+    images: [east2ndAve01, east2ndAve02, east2ndAve03, east2ndAve04],
   },
   {
     slug: "sqn-education",
