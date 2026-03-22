@@ -127,6 +127,9 @@ import titanicExhibition02 from "@/assets/titanic_exhibition-02.webp";
 import treasureCoveCasino02 from "@/assets/treasure_cove_casino-02.webp";
 import vanguardFitness02 from "@/assets/vanguard_fitness-02.webp";
 import vinsonCreekResidence02 from "@/assets/vinson-creek-residence-02.webp";
+import wuResidence02 from "@/assets/wu-residence-02.webp";
+import xuResidence02 from "@/assets/xu-residence-02.webp";
+import xuResidence03 from "@/assets/xu-residence-03.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
