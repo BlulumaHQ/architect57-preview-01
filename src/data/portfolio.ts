@@ -341,6 +341,7 @@ export const collections: Collection[] = [
       { image: morganPlay01, title: "Morgan Play", location: "BC" },
       { image: okanaganChateauRetirement01, title: "Okanagan Chateau Retirement", location: "BC" },
       { image: siennaRideauRetirement01, title: "Sienna Rideau Retirement", location: "BC" },
+      { image: treasureCoveCasino01, title: "Treasure Cove Casino", location: "BC" },
     ],
   },
   {
