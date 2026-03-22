@@ -175,8 +175,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Vancouver, BC",
     description:
       "A contemporary multi-unit housing development in Vancouver's Collingwood neighbourhood, contributing thoughtfully to the area's increasing urban density. The design balances privacy between units with shared landscape amenity, creating a cohesive residential community within a compact urban footprint.",
-    heroImage: srcProject10,
-    images: [srcProject10, srcProject11],
+    heroImage: collingwood01,
+    images: [collingwood01],
     details: [
       { label: "Category", value: "Multi-Unit Housing" },
       { label: "Location", value: "Vancouver, BC" },
