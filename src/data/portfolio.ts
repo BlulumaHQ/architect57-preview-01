@@ -84,6 +84,7 @@ import brightwaySeafood01 from "@/assets/brightway_cfia_seafood-01.webp";
 import brightwaySeafood02 from "@/assets/brightway_cfia_seafood-02.webp";
 import brightwaySeafood03 from "@/assets/brightway_cfia_seafood-03.webp";
 import corvusEnergyExpansion01 from "@/assets/corvus_energy_expansion-01.webp";
+import corvusEnergyExpansion02 from "@/assets/corvus_energy_expansion-02.webp";
 import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
 import adore01 from "@/assets/adore-01.webp";
