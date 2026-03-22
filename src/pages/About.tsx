@@ -2,7 +2,8 @@ import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import aboutHero from "@/assets/about-hero.jpg";
+import aboutUs01 from "@/assets/about-us-01.webp";
+import architect5701 from "@/assets/architect-57-01.webp";
 import projectImg6 from "@/assets/project-6.jpg";
 
 const About = () => (
@@ -11,7 +12,10 @@ const About = () => (
     <section className="pt-36 pb-20 md:pt-44 md:pb-28">
       <div className="container-site">
         <ScrollReveal>
-          <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">About</span>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-5 h-px bg-[#a11d2d]/50" />
+            <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">About</span>
+          </div>
           <h1 className="mt-4 text-balance">Architect 57 Inc.</h1>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
             Specializing in integrated building design since our founding, we bring expertise, sustainability, and community-focused values to every project.
@@ -25,12 +29,26 @@ const About = () => (
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <ScrollReveal direction="left">
-            <img
-              src={aboutHero}
-              alt="Architectural detail"
-              className="w-full aspect-[3/4] object-cover"
-              loading="lazy"
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <img
+                  src={aboutUs01}
+                  alt="Architect 57 office reception"
+                  className="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                />
+                <span className="absolute bottom-3 left-3 text-[10px] tracking-[0.15em] uppercase text-white/60 font-light">01</span>
+              </div>
+              <div className="mt-8 relative">
+                <img
+                  src={architect5701}
+                  alt="Architect 57 studio"
+                  className="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                />
+                <span className="absolute bottom-3 left-3 text-[10px] tracking-[0.15em] uppercase text-white/60 font-light">02</span>
+              </div>
+            </div>
           </ScrollReveal>
           <ScrollReveal direction="right">
             <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Our Story</span>
@@ -62,7 +80,8 @@ const About = () => (
             { title: "Community", desc: "We help build a better, healthier, and sustainable living environment through thoughtful design and integrated delivery." },
           ].map((v, i) => (
             <ScrollReveal key={v.title} delay={i * 100}>
-              <div className="border-t border-border pt-8">
+              <div className="border-t border-border pt-8 relative">
+                <span className="absolute -top-px left-0 w-5 h-px bg-[#a11d2d]/50" />
                 <h3 className="text-lg font-normal mb-4">{v.title}</h3>
                 <p className="text-muted-foreground text-[15px] font-light leading-[1.8]">{v.desc}</p>
               </div>

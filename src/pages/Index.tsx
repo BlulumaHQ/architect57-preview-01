@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
-import { homepageFeaturedProjects } from "@/data/portfolio";
+import { getRandomFeaturedProjects } from "@/data/portfolio";
 
 const heroSlides = [heroImage1, heroImage2];
 
@@ -18,6 +18,7 @@ const services = [
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const featuredProjects = useMemo(() => getRandomFeaturedProjects(4), []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -69,6 +70,10 @@ const Index = () => {
       <section className="py-32 md:py-44">
         <div className="container-site">
           <ScrollReveal>
+            <div className="flex items-start gap-4 mb-6">
+              <span className="hidden md:block w-8 h-px bg-[#a11d2d]/40 mt-[1.1em] shrink-0" />
+              <span className="text-[11px] tracking-[0.2em] uppercase text-[#a11d2d]/60 font-normal">Est. Richmond, BC</span>
+            </div>
             <p className="text-2xl md:text-[2.5rem] lg:text-[3rem] leading-[1.2] font-light max-w-5xl text-balance" style={{ letterSpacing: "-0.02em" }}>
               Architect 57 Inc. specializes in integrated building design, complex building code consultation, sustainable architecture, and project planning — creating spaces that serve people and place.
             </p>
@@ -88,7 +93,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14">
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 80}>
-                <div className="border-t border-border pt-8">
+                <div className="border-t border-border pt-8 relative">
+                  <span className="absolute -top-px left-0 w-6 h-px bg-[#a11d2d]/50" />
                   <h3 className="text-lg font-normal tracking-[-0.01em] mb-3">{s.title}</h3>
                   <p className="text-muted-foreground text-[15px] font-light leading-relaxed">{s.desc}</p>
                 </div>
@@ -108,7 +114,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {homepageFeaturedProjects.map((p, i) => (
+            {featuredProjects.map((p, i) => (
               <ScrollReveal key={p.title} delay={i * 70}>
                 <Link to={p.link} className="group block relative overflow-hidden aspect-[4/3]">
                   <img
@@ -155,18 +161,17 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="py-10">
-                  <div className="text-3xl md:text-4xl font-light tracking-tight">IPD</div>
-                  <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">Integrated Delivery</div>
-                </div>
-                <div className="py-10">
-                  <div className="text-3xl md:text-4xl font-light tracking-tight">BIM</div>
-                  <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">Info Modelling</div>
-                </div>
-                <div className="py-10">
-                  <div className="text-3xl md:text-4xl font-light tracking-tight">CP</div>
-                  <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">Certified Pro</div>
-                </div>
+                {[
+                  { val: "IPD", label: "Integrated Delivery" },
+                  { val: "BIM", label: "Info Modelling" },
+                  { val: "CP", label: "Certified Pro" },
+                ].map((item) => (
+                  <div key={item.val} className="py-10 relative">
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-px bg-[#a11d2d]/40" />
+                    <div className="text-3xl md:text-4xl font-light tracking-tight">{item.val}</div>
+                    <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">{item.label}</div>
+                  </div>
+                ))}
               </div>
             </ScrollReveal>
           </div>

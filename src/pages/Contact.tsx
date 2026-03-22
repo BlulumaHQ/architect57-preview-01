@@ -18,7 +18,10 @@ const Contact = () => {
       <section className="pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="container-site">
           <ScrollReveal>
-            <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Contact</span>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-5 h-px bg-[#a11d2d]/50" />
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Contact</span>
+            </div>
             <h1 className="mt-4 text-balance">Get in Touch</h1>
             <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
               Ready to discuss your project? Reach out and let's explore how we can bring your vision to life.

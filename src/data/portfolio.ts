@@ -889,30 +889,55 @@ export const allProjects: ProjectItem[] = [
   },
 ];
 
-// Fixed curated homepage projects
-export const homepageFeaturedProjects: HomepageProject[] = [
-  {
-    title: "Chen Residence",
-    category: "Residential",
-    image: chenResidence01,
-    link: "/projects/chen-residence",
-  },
-  {
-    title: "Collingwood",
-    category: "Residential",
-    image: collingwood01,
-    link: "/projects/collingwood",
-  },
-  {
-    title: "Bridgeport Office Building",
-    category: "Commercial",
-    image: bridgeportOffice01,
-    link: "/projects/bridgeport-office",
-  },
-  {
-    title: "Zone 5, Union Bay Estate",
-    category: "Master Planning",
-    image: zone5UnionBay01,
-    link: "/projects/zone-5-union-bay-estate",
-  },
-];
+// Randomized homepage featured projects — category-diverse on each refresh
+export function getRandomFeaturedProjects(count = 4): HomepageProject[] {
+  const categories: ProjectCategory[] = [
+    "Residential",
+    "Commercial",
+    "Industrial",
+    "Institutional",
+    "Community & Cultural",
+    "Interior Projects",
+    "Master Planning",
+  ];
+
+  // Shuffle categories
+  const shuffledCats = [...categories].sort(() => Math.random() - 0.5);
+
+  const picked: HomepageProject[] = [];
+  const usedSlugs = new Set<string>();
+
+  // Pick one from each category until we have enough
+  for (const cat of shuffledCats) {
+    if (picked.length >= count) break;
+    const pool = allProjects.filter(
+      (p) => p.category === cat && !usedSlugs.has(p.slug)
+    );
+    if (pool.length === 0) continue;
+    const proj = pool[Math.floor(Math.random() * pool.length)];
+    usedSlugs.add(proj.slug);
+    picked.push({
+      title: proj.title,
+      category: proj.category,
+      image: proj.image,
+      link: `/projects/${proj.slug}`,
+    });
+  }
+
+  // If still short, fill from remaining
+  if (picked.length < count) {
+    const remaining = allProjects.filter((p) => !usedSlugs.has(p.slug));
+    const shuffled = remaining.sort(() => Math.random() - 0.5);
+    for (const proj of shuffled) {
+      if (picked.length >= count) break;
+      picked.push({
+        title: proj.title,
+        category: proj.category,
+        image: proj.image,
+        link: `/projects/${proj.slug}`,
+      });
+    }
+  }
+
+  return picked;
+}
