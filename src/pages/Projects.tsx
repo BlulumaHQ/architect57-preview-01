@@ -48,9 +48,12 @@ const Projects = () => {
       <section className="pt-36 pb-16 md:pt-44 md:pb-24">
         <div className="container-site">
           <ScrollReveal>
-            <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
-              Portfolio
-            </span>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-5 h-px bg-[#a11d2d]/50" />
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
+                Portfolio
+              </span>
+            </div>
             <h1 className="mt-4 font-light text-balance">Selected Projects</h1>
             <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
               A curated selection of our integrated building design work across

@@ -55,7 +55,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright bar */}
-      <div className="border-t border-background/8">
+      <div className="border-t border-background/8 relative">
+        <span className="absolute top-0 left-0 w-8 h-px bg-[#a11d2d]/50" />
         <div className="container-site py-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-[11px] text-background/30 text-center md:text-left font-light">
             © {year} Architect 57 Inc. All rights reserved. | Web Design by{" "}
