@@ -744,7 +744,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Fitness"],
     location: "Richmond, BC",
     image: vanguardFitness01,
-    images: [vanguardFitness01],
+    images: [vanguardFitness01, vanguardFitness02],
   },
   {
     slug: "morgan-play",
