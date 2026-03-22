@@ -347,7 +347,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Bridgeport Office Building",
     category: "Commercial & Industrial",
-    image: srcProject7,
+    image: bridgeportOffice01,
     link: "/projects/bridgeport-office",
   },
   {
