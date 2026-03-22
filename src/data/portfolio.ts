@@ -776,7 +776,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Commercial Interior"],
     area: "12,339 sq. ft.",
-    image: srcProject6,
+    image: tecoOffice01,
   },
   {
     slug: "cleardent",
