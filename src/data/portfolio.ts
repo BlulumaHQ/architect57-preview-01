@@ -364,7 +364,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Condo"],
     location: "Langley, BC",
     image: fiftyFourthAveCondo01,
-    images: [fiftyFourthAveCondo01],
+    images: [fiftyFourthAveCondo01, fiftyFourthAveCondo03],
   },
   {
     slug: "fletcher-townhouses",
