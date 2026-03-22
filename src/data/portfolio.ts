@@ -110,11 +110,11 @@ export const collections: Collection[] = [
     title: "Daycare & Education",
     description:
       "Purpose-built learning environments that nurture development through thoughtful spatial design, natural light, and safe, welcoming materials.",
-    coverImage: collDc1,
+    coverImage: srcProject3,
     items: [
-      { image: collDc1, title: "Sunrise Daycare Centre", location: "Richmond, BC" },
-      { image: collDc2, title: "Maple Learning Commons", location: "Burnaby, BC" },
-      { image: collDc3, title: "Cedar Creek Early Learning", location: "Richmond, BC" },
+      { image: srcProject3, title: "Sunrise Daycare Centre", location: "Richmond, BC" },
+      { image: srcProject6, title: "Maple Learning Commons", location: "Burnaby, BC" },
+      { image: srcProject9, title: "Cedar Creek Early Learning", location: "Richmond, BC" },
     ],
   },
   {
