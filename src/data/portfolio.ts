@@ -46,6 +46,18 @@ import morganPlay01 from "@/assets/morgan_play-01.webp";
 import okanaganChateauRetirement01 from "@/assets/okanagan_chateau_retirement-01.webp";
 import siennaRideauRetirement01 from "@/assets/sienna_rideau_retirement-01.webp";
 
+// Batch 4 uploaded project images
+import chenResidence01 from "@/assets/chen-residence-01.webp";
+import hanResidence01 from "@/assets/han-residence-01.webp";
+import severnResidence01 from "@/assets/severn-residence-01.webp";
+import xuResidence01 from "@/assets/xu-residence-01.webp";
+import no6Residence01 from "@/assets/no6-residence-01.webp";
+import vinsonCreekResidence01 from "@/assets/vinson-creek-residence-01.webp";
+import wuResidence01 from "@/assets/wu-residence-01.webp";
+import cartierResidence01 from "@/assets/cartier-residence-01.webp";
+import laurelResidence01 from "@/assets/laurel-residence-01.webp";
+import treasureCoveCasino01 from "@/assets/treasure_cove_casino-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
@@ -103,8 +115,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "West Vancouver, BC",
     description:
       "A distinguished custom residence set against the dramatic topography of West Vancouver. The design leverages natural grade changes to create layered living spaces with expansive views toward the ocean and mountains. Recognized as a finalist for the CHBA National Awards for Housing Excellence (formerly SAM Awards), the project represents a benchmark of residential design quality.",
-    heroImage: srcProject1,
-    images: [srcProject1, srcProject2, srcProject3],
+    heroImage: chenResidence01,
+    images: [chenResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "West Vancouver, BC" },
@@ -120,8 +132,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Delta, BC",
     description:
       "A generously proportioned family residence in Delta, designed in collaboration with interior designer John Han. The home balances contemporary form with warm materiality, creating spaces that feel both refined and inviting. Careful attention to interior-exterior continuity ensures seamless transitions between the living areas and the surrounding landscape.",
-    heroImage: srcProject4,
-    images: [srcProject4, srcProject5, srcProject6],
+    heroImage: hanResidence01,
+    images: [hanResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "Delta, BC" },
@@ -137,8 +149,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Richmond, BC",
     description:
       "A custom single-family residence in Richmond that embodies clean contemporary lines and thoughtful spatial planning. The design prioritizes natural light and flow between interior living spaces and outdoor areas, creating a home that feels open yet intimate.",
-    heroImage: srcProject2,
-    images: [srcProject2, srcProject3],
+    heroImage: severnResidence01,
+    images: [severnResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "Richmond, BC" },
@@ -152,8 +164,8 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Richmond, BC",
     description:
       "A refined single-family home in Richmond designed to maximize livable space within a considered footprint. The residence features a clean material palette and efficient spatial organization that reflects the owner's vision for modern, functional living.",
-    heroImage: srcProject5,
-    images: [srcProject5, srcProject6],
+    heroImage: xuResidence01,
+    images: [xuResidence01],
     details: [
       { label: "Category", value: "Residential" },
       { label: "Location", value: "Richmond, BC" },
@@ -223,15 +235,15 @@ export const collections: Collection[] = [
       "A curated selection of custom residences designed with contemporary sensibility and sensitivity to site, climate, and client aspiration.",
     coverImage: srcProject4,
     items: [
-      { image: srcProject1, title: "No6 Residence", location: "Richmond, BC" },
+      { image: no6Residence01, title: "No6 Residence", location: "Richmond, BC" },
       {
-        image: srcProject2,
+        image: vinsonCreekResidence01,
         title: "Vinson Creek Residence",
         location: "West Vancouver, BC",
         meta: "Co-Designer: Angel Wang · 9,343 sq. ft.",
       },
       {
-        image: srcProject5,
+        image: wuResidence01,
         title: "Wu Residence",
         location: "West Vancouver, BC",
         meta: "6,733 sq. ft.",
@@ -242,8 +254,8 @@ export const collections: Collection[] = [
         location: "Delta, BC",
         meta: "5,177 sq. ft.",
       },
-      { image: srcProject11, title: "Cartier Residence", location: "Vancouver, BC" },
-      { image: srcProject3, title: "Laurel Residence", location: "Vancouver, BC" },
+      { image: cartierResidence01, title: "Cartier Residence", location: "Vancouver, BC" },
+      { image: laurelResidence01, title: "Laurel Residence", location: "Vancouver, BC" },
     ],
   },
   {
@@ -329,6 +341,7 @@ export const collections: Collection[] = [
       { image: morganPlay01, title: "Morgan Play", location: "BC" },
       { image: okanaganChateauRetirement01, title: "Okanagan Chateau Retirement", location: "BC" },
       { image: siennaRideauRetirement01, title: "Sienna Rideau Retirement", location: "BC" },
+      { image: treasureCoveCasino01, title: "Treasure Cove Casino", location: "BC" },
     ],
   },
   {
@@ -365,7 +378,7 @@ export const homepageFeaturedProjects: HomepageProject[] = [
   {
     title: "Chen Residence",
     category: "Residential",
-    image: srcProject1,
+    image: chenResidence01,
     link: "/projects/chen-residence",
   },
   {
