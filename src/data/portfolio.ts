@@ -325,7 +325,7 @@ export const allProjects: ProjectItem[] = [
     area: "77,527 sq. ft.",
     budget: "$25 millions",
     image: austinHighRise01,
-    images: [austinHighRise01],
+    images: [austinHighRise01, austinHighRise02],
   },
   {
     slug: "54th-ave-condo-12",
