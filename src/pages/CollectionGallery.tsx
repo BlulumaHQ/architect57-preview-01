@@ -3,9 +3,11 @@ import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft } from "lucide-react";
 import { allProjects, projectCategories, type ProjectCategory } from "@/data/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CollectionGallery = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t } = useLanguage();
   
   // Find the category matching the slug
   const category = projectCategories.find(
@@ -25,13 +27,13 @@ const CollectionGallery = () => {
             to="/projects"
             className="inline-flex items-center gap-2 text-[13px] tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors mb-10"
           >
-            <ArrowLeft size={14} /> All Projects
+            <ArrowLeft size={14} /> {t("collection.back")}
           </Link>
           <ScrollReveal>
             <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
-              Collection
+              {t("collection.label")}
             </span>
-            <h1 className="mt-4 font-light">{category}</h1>
+            <h1 className="mt-4 font-light">{t(`cat.${category}`)}</h1>
           </ScrollReveal>
         </div>
       </section>

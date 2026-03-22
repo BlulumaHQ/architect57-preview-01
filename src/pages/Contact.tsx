@@ -2,10 +2,12 @@ import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
 import { Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,11 +22,11 @@ const Contact = () => {
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-5 h-px bg-[#a11d2d]/50" />
-              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">Contact</span>
+              <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">{t("contact.label")}</span>
             </div>
-            <h1 className="mt-4 text-balance">Get in Touch</h1>
+            <h1 className="mt-4 text-balance">{t("contact.title")}</h1>
             <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
-              Ready to discuss your project? Reach out and let's explore how we can bring your vision to life.
+              {t("contact.subtitle")}
             </p>
           </ScrollReveal>
         </div>
@@ -40,61 +42,61 @@ const Contact = () => {
                   <div className="w-14 h-14 border border-foreground/10 flex items-center justify-center mx-auto mb-6">
                     <Mail className="text-foreground/40" size={24} />
                   </div>
-                  <h3 className="text-xl font-light mb-3">Thank You</h3>
-                  <p className="text-muted-foreground font-light text-[15px]">We've received your message and will get back to you shortly.</p>
+                  <h3 className="text-xl font-light mb-3">{t("contact.thankyou.title")}</h3>
+                  <p className="text-muted-foreground font-light text-[15px]">{t("contact.thankyou.message")}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">Full Name</label>
+                    <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">{t("contact.form.name")}</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="w-full px-0 py-3 border-0 border-b border-border bg-transparent focus:outline-none focus:border-foreground transition-colors font-light"
-                      placeholder="Your name"
+                      placeholder={t("contact.form.name.placeholder")}
                     />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">Email</label>
+                      <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">{t("contact.form.email")}</label>
                       <input
                         type="email"
                         required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         className="w-full px-0 py-3 border-0 border-b border-border bg-transparent focus:outline-none focus:border-foreground transition-colors font-light"
-                        placeholder="you@email.com"
+                        placeholder={t("contact.form.email.placeholder")}
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">Phone</label>
+                      <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">{t("contact.form.phone")}</label>
                       <input
                         type="tel"
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
                         className="w-full px-0 py-3 border-0 border-b border-border bg-transparent focus:outline-none focus:border-foreground transition-colors font-light"
-                        placeholder="(optional)"
+                        placeholder={t("contact.form.phone.placeholder")}
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">Message</label>
+                    <label className="block text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal mb-3">{t("contact.form.message")}</label>
                     <textarea
                       required
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       rows={5}
                       className="w-full px-0 py-3 border-0 border-b border-border bg-transparent focus:outline-none focus:border-foreground transition-colors resize-none font-light"
-                      placeholder="Tell us about your project..."
+                      placeholder={t("contact.form.message.placeholder")}
                     />
                   </div>
                   <button
                     type="submit"
                     className="text-[13px] tracking-[0.12em] uppercase font-normal border border-foreground/20 px-8 py-3.5 hover:bg-foreground hover:text-background transition-all duration-300 active:scale-[0.97] mt-4"
                   >
-                    Send Message
+                    {t("contact.form.submit")}
                   </button>
                 </form>
               )}
@@ -104,18 +106,18 @@ const Contact = () => {
             <ScrollReveal direction="right">
               <div className="space-y-12">
                 <div>
-                  <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal block mb-6">Contact Information</span>
+                  <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-normal block mb-6">{t("contact.info.label")}</span>
                   <div className="space-y-5">
                     <div>
-                      <p className="text-[13px] tracking-wide font-normal mb-1">Address</p>
-                      <p className="text-muted-foreground text-[15px] font-light">203-2680 Shell Road, Richmond, BC V6X 4C9</p>
+                      <p className="text-[13px] tracking-wide font-normal mb-1">{t("contact.info.address.label")}</p>
+                      <p className="text-muted-foreground text-[15px] font-light">{t("contact.info.address.value")}</p>
                     </div>
                     <div>
-                      <p className="text-[13px] tracking-wide font-normal mb-1">Phone</p>
+                      <p className="text-[13px] tracking-wide font-normal mb-1">{t("contact.info.phone.label")}</p>
                       <a href="tel:604-818-2088" className="text-muted-foreground text-[15px] font-light hover:text-foreground transition-colors duration-300">604-818-2088</a>
                     </div>
                     <div>
-                      <p className="text-[13px] tracking-wide font-normal mb-1">Email</p>
+                      <p className="text-[13px] tracking-wide font-normal mb-1">{t("contact.info.email.label")}</p>
                       <a href="mailto:cary@architect57.com" className="text-muted-foreground text-[15px] font-light hover:text-foreground transition-colors duration-300">cary@architect57.com</a>
                     </div>
                   </div>

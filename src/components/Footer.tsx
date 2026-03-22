@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import logoWhite from "@/assets/architect-57-logo-white.svg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-foreground text-background/70">
@@ -10,9 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-6">
           {/* Column 1: Wordmark & Description */}
           <div className="md:col-span-1">
-            <img src={logoWhite} alt="Architect 57" className="h-[55px] max-h-[55px] w-auto mb-5" />
+            <img src={logoWhite} alt="Architect 57 無極建築" className="h-[55px] max-h-[55px] w-auto mb-5" />
             <p className="text-sm leading-relaxed text-background/40 font-light">
-              Integrated building design, code consultation, and sustainable architecture serving Richmond, BC.
+              {t("footer.description")}
             </p>
           </div>
 
@@ -21,29 +23,29 @@ const Footer = () => {
 
           {/* Column 3: Navigation */}
           <div>
-            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Navigate</h4>
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">{t("footer.navigate")}</h4>
             <nav className="flex flex-col gap-3">
-              <Link to="/" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Home</Link>
-              <Link to="/projects" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Projects</Link>
-              <Link to="/about" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">About</Link>
-              <Link to="/contact" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">Contact</Link>
+              <Link to="/" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">{t("nav.home")}</Link>
+              <Link to="/projects" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">{t("nav.projects")}</Link>
+              <Link to="/about" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">{t("nav.about")}</Link>
+              <Link to="/contact" className="text-sm text-background/50 hover:text-background transition-colors duration-300 font-light">{t("nav.contact")}</Link>
             </nav>
           </div>
 
           {/* Column 4: Services */}
           <div>
-            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Services</h4>
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">{t("footer.services")}</h4>
             <nav className="flex flex-col gap-3">
-              <span className="text-sm text-background/50 font-light">Building Design</span>
-              <span className="text-sm text-background/50 font-light">Code Consultation</span>
-              <span className="text-sm text-background/50 font-light">Project Management</span>
-              <span className="text-sm text-background/50 font-light">BIM Services</span>
+              <span className="text-sm text-background/50 font-light">{t("footer.services.building")}</span>
+              <span className="text-sm text-background/50 font-light">{t("footer.services.code")}</span>
+              <span className="text-sm text-background/50 font-light">{t("footer.services.pm")}</span>
+              <span className="text-sm text-background/50 font-light">{t("footer.services.bim")}</span>
             </nav>
           </div>
 
           {/* Column 5: Contact */}
           <div>
-            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">Contact</h4>
+            <h4 className="text-background/30 text-[11px] uppercase tracking-[0.2em] font-normal mb-5">{t("footer.contact")}</h4>
             <div className="flex flex-col gap-3 text-sm text-background/50 font-light">
               <span>203-2680 Shell Road</span>
               <span>Richmond, BC V6X 4C9</span>
@@ -59,7 +61,7 @@ const Footer = () => {
         <span className="absolute top-0 left-0 w-8 h-px bg-[#a11d2d]/50" />
         <div className="container-site py-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-[11px] text-background/30 text-center md:text-left font-light">
-            © {year} Architect 57 Inc. All rights reserved. | Web Design by{" "}
+            © {year} Architect 57 無極建築 All rights reserved. | Web Design by{" "}
             <a
               href="https://bluluma.com"
               target="_blank"

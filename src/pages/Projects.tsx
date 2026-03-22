@@ -9,10 +9,12 @@ import {
   getRandomFeaturedProjects,
   type ProjectCategory,
 } from "@/data/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("All");
   const [activeTag, setActiveTag] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   // Top 3 featured projects — randomized from Residential & Commercial
   const topFeatured = useMemo(() => {
@@ -51,14 +53,12 @@ const Projects = () => {
             <div className="flex items-center gap-3 mb-4">
               <span className="w-5 h-px bg-[#a11d2d]/50" />
               <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
-                Portfolio
+                {t("projects.label")}
               </span>
             </div>
-            <h1 className="mt-4 font-light text-balance">Selected Projects</h1>
+            <h1 className="mt-4 font-light text-balance">{t("projects.title")}</h1>
             <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
-              A curated selection of our integrated building design work across
-              commercial, residential, industrial, institutional, and mixed-use
-              typologies.
+              {t("projects.subtitle")}
             </p>
           </ScrollReveal>
         </div>
@@ -70,7 +70,7 @@ const Projects = () => {
           <ScrollReveal>
             <div className="mb-10">
               <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
-                Featured Work
+                {t("projects.featured.label")}
               </span>
             </div>
           </ScrollReveal>
@@ -90,7 +90,7 @@ const Projects = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
                       <span className="text-white text-[13px] tracking-[0.12em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        See Details
+                        {t("projects.seeDetails")}
                       </span>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ const Projects = () => {
                       {project.title}
                     </h2>
                     <span className="text-[12px] text-muted-foreground font-light mt-1 block">
-                      {project.category}
+                      {t(`cat.${project.category}`)}
                       {project.location ? ` — ${project.location}` : ""}
                     </span>
                   </div>
@@ -121,7 +121,7 @@ const Projects = () => {
           <ScrollReveal>
             <div className="mb-10">
               <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
-                All Projects
+                {t("projects.all.label")}
               </span>
             </div>
             {/* Main Category Filter */}
@@ -139,7 +139,7 @@ const Projects = () => {
                       : "border-foreground/15 text-muted-foreground hover:border-foreground/40 hover:text-foreground"
                   }`}
                 >
-                  {cat}
+                  {t(`cat.${cat}`)}
                 </button>
               ))}
             </div>
@@ -154,7 +154,7 @@ const Projects = () => {
                       : "border-foreground/10 text-muted-foreground hover:border-foreground/25 hover:text-foreground"
                   }`}
                 >
-                  All Tags
+                  {t("projects.allTags")}
                 </button>
                 {availableTags.map((tag) => (
                   <button
@@ -195,7 +195,7 @@ const Projects = () => {
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
                         <span className="text-white text-[12px] tracking-[0.1em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          See Details
+                          {t("projects.seeDetails")}
                         </span>
                       </div>
                     </div>
@@ -215,7 +215,7 @@ const Projects = () => {
           ) : (
             <div className="text-center py-24">
               <p className="text-muted-foreground text-lg font-light">
-                No projects match this filter.
+                {t("projects.noMatch")}
               </p>
               <button
                 onClick={() => {
@@ -224,7 +224,7 @@ const Projects = () => {
                 }}
                 className="mt-6 text-[13px] tracking-[0.1em] uppercase text-foreground underline underline-offset-4 hover:no-underline transition-all"
               >
-                View All Projects
+                {t("projects.viewAll")}
               </button>
             </div>
           )}
