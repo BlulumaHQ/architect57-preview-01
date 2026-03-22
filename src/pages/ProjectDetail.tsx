@@ -18,12 +18,20 @@ const ProjectDetail = () => {
       ? featuredProjects[projectIndex + 1]
       : null;
 
+  const galleryImages = project.images || [project.image];
+  const projectDetails = project.details || [
+    { label: "Category", value: project.category },
+    ...(project.location ? [{ label: "Location", value: project.location }] : []),
+    ...(project.area ? [{ label: "Area", value: project.area }] : []),
+    ...(project.budget ? [{ label: "Budget", value: project.budget }] : []),
+  ];
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative h-[60vh] md:h-[75vh] overflow-hidden">
         <img
-          src={project.heroImage}
+          src={project.image}
           alt={project.title}
           className="w-full h-full object-cover"
         />
@@ -66,7 +74,7 @@ const ProjectDetail = () => {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className="space-y-5">
-                {project.details.map((d) => (
+                {projectDetails.map((d) => (
                   <div key={d.label} className="border-t border-border pt-4">
                     <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground block mb-1">
                       {d.label}
@@ -84,7 +92,7 @@ const ProjectDetail = () => {
       <section className="pb-24 md:pb-32">
         <div className="container-site">
           <div className="space-y-5">
-            {project.images.map((img, i) => (
+            {galleryImages.map((img, i) => (
               <ScrollReveal key={i} delay={i * 60}>
                 <div className="overflow-hidden">
                   <img

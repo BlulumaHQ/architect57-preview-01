@@ -2,13 +2,19 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft } from "lucide-react";
-import { collections } from "@/data/portfolio";
+import { allProjects, projectCategories, type ProjectCategory } from "@/data/portfolio";
 
 const CollectionGallery = () => {
   const { slug } = useParams<{ slug: string }>();
-  const collection = collections.find((c) => c.slug === slug);
+  
+  // Find the category matching the slug
+  const category = projectCategories.find(
+    (c) => c !== "All" && c.toLowerCase().replace(/[^a-z0-9]+/g, "-") === slug
+  ) as Exclude<ProjectCategory, "All"> | undefined;
 
-  if (!collection) return <Navigate to="/projects" replace />;
+  if (!category) return <Navigate to="/projects" replace />;
+
+  const categoryProjects = allProjects.filter((p) => p.category === category);
 
   return (
     <Layout>
@@ -25,10 +31,7 @@ const CollectionGallery = () => {
             <span className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-normal">
               Collection
             </span>
-            <h1 className="mt-4 font-light">{collection.title}</h1>
-            <p className="text-muted-foreground mt-6 max-w-2xl text-lg font-light">
-              {collection.description}
-            </p>
+            <h1 className="mt-4 font-light">{category}</h1>
           </ScrollReveal>
         </div>
       </section>
@@ -37,8 +40,8 @@ const CollectionGallery = () => {
       <section className="pb-24 md:pb-32">
         <div className="container-site">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {collection.items.map((item, i) => (
-              <ScrollReveal key={i} delay={i * 70}>
+            {categoryProjects.map((item, i) => (
+              <ScrollReveal key={item.slug} delay={i * 70}>
                 <div className="group overflow-hidden">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -58,9 +61,9 @@ const CollectionGallery = () => {
                         {item.location}
                       </span>
                     )}
-                    {item.meta && (
+                    {item.area && (
                       <span className="text-[12px] text-muted-foreground/70 font-light block mt-0.5">
-                        {item.meta}
+                        {item.area}
                       </span>
                     )}
                   </div>
