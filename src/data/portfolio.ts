@@ -272,7 +272,7 @@ export const allProjects: ProjectItem[] = [
     location: "Delta, BC",
     area: "5,177 sq. ft.",
     image: luResidence01,
-    images: [luResidence01],
+    images: [luResidence01, luResidence02],
   },
   {
     slug: "cartier-residence",
