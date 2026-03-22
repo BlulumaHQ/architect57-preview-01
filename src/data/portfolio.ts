@@ -744,7 +744,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Exhibition"],
     location: "Richmond, BC",
     area: "15,801 sq. ft.",
-    image: srcProject3,
+    image: titanicExhibition01,
   },
   {
     slug: "beresford-doctor-clinic",
