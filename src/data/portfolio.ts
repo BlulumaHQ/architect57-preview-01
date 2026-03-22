@@ -1,5 +1,6 @@
 // New real project images
 import cleardent01 from "@/assets/cleardent-01.webp";
+import cleardent02 from "@/assets/cleardent-02.webp";
 import lionsTravel01 from "@/assets/lions_travel-01.webp";
 import tecoOffice01 from "@/assets/teco_office-01.webp";
 import titanicExhibition01 from "@/assets/titanic_exhibition-01.webp";
@@ -28,6 +29,11 @@ import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.webp";
 import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.webp";
 import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.webp";
 import collingwood01 from "@/assets/collingwood-01.webp";
+import collingwood02 from "@/assets/collingwood-02.webp";
+import collingwood03 from "@/assets/collingwood-03.webp";
+import collingwood04 from "@/assets/collingwood-04.webp";
+import collingwood05 from "@/assets/collingwood-05.webp";
+import collingwood06 from "@/assets/collingwood-06.webp";
 import royalOak01 from "@/assets/royal-oak-01.webp";
 import west3901 from "@/assets/west-39-01.webp";
 import seavale01 from "@/assets/seavale-01.webp";
@@ -78,6 +84,7 @@ import brightwaySeafood01 from "@/assets/brightway_cfia_seafood-01.webp";
 import brightwaySeafood02 from "@/assets/brightway_cfia_seafood-02.webp";
 import brightwaySeafood03 from "@/assets/brightway_cfia_seafood-03.webp";
 import corvusEnergyExpansion01 from "@/assets/corvus_energy_expansion-01.webp";
+import corvusEnergyExpansion02 from "@/assets/corvus_energy_expansion-02.webp";
 import greenlightInnovation01 from "@/assets/greenlight_innovation-01.webp";
 import willingdonGreenClinic01 from "@/assets/willingdon_green_clinic-01.webp";
 import adore01 from "@/assets/adore-01.webp";
@@ -285,7 +292,7 @@ export const allProjects: ProjectItem[] = [
     area: "10,500 sq. ft.",
     budget: "$5 millions",
     image: collingwood01,
-    images: [collingwood01],
+    images: [collingwood01, collingwood02, collingwood03, collingwood04, collingwood05, collingwood06],
   },
   {
     slug: "royal-oak",
@@ -495,7 +502,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "33,828 sq. ft.",
     image: corvusEnergyExpansion01,
-    images: [corvusEnergyExpansion01],
+    images: [corvusEnergyExpansion01, corvusEnergyExpansion02],
   },
   {
     slug: "rayacom-premium-print",
@@ -789,7 +796,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Dental"],
     location: "Burnaby, BC",
     image: cleardent01,
-    images: [cleardent01],
+    images: [cleardent01, cleardent02],
   },
   {
     slug: "lions-travel",
