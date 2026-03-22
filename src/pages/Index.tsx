@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
+import chbaAward from "@/assets/chba-award.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
 import { getRandomFeaturedProjects } from "@/data/portfolio";
 import { useLanguage } from "@/contexts/LanguageContext";
