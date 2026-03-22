@@ -118,6 +118,12 @@ import severnResidence02 from "@/assets/severn-residence-02.webp";
 import severnResidence03 from "@/assets/severn-residence-03.webp";
 import sqnEducation02 from "@/assets/sqn-education-02.webp";
 import sqnEducation03 from "@/assets/sqn-education-03.webp";
+import sushiKiwami02 from "@/assets/sushi-kiwami-02.webp";
+import sushiKiwami03 from "@/assets/sushi-kiwami-03.webp";
+import sushiKiwami04 from "@/assets/sushi-kiwami-04.webp";
+import sushiKiwami05 from "@/assets/sushi-kiwami-05.webp";
+import torakeJapaneseCuisine02 from "@/assets/torake-japanese-cuisine-02.webp";
+import titanicExhibition02 from "@/assets/titanic_exhibition-02.webp";
 
 // ─── Types ───────────────────────────────────────────────
 
