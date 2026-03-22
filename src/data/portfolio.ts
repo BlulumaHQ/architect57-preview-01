@@ -1,5 +1,6 @@
 // New real project images
 import cleardent01 from "@/assets/cleardent-01.webp";
+import cleardent02 from "@/assets/cleardent-02.webp";
 import lionsTravel01 from "@/assets/lions_travel-01.webp";
 import tecoOffice01 from "@/assets/teco_office-01.webp";
 import titanicExhibition01 from "@/assets/titanic_exhibition-01.webp";
