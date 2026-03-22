@@ -72,6 +72,8 @@ import luResidence01 from "@/assets/lu-residence-01.webp";
 
 import poLamTemple01 from "@/assets/po_lam_temple-01.webp";
 import goldBuddhaMonastery01 from "@/assets/gold_buddha_monastery-01.webp";
+import goldBuddhaMonastery02 from "@/assets/gold_buddha_monastery-02.webp";
+import goldBuddhaMonastery03 from "@/assets/gold_buddha_monastery-03.webp";
 import iglesiaNiCristoLocale01 from "@/assets/iglesia_ni_cristo_locale-01.webp";
 import lutheranCommunityChurch01 from "@/assets/lutheran_community_church-01.webp";
 import ontarioStorageWarehouse01 from "@/assets/ontario_storage_warehouse-01.webp";
