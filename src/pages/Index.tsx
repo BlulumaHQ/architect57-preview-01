@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroImage1 from "@/assets/hero-1.jpg";
+import chbaAward from "@/assets/chba-award.jpg";
 import heroImage2 from "@/assets/hero-2.jpg";
 import { getRandomFeaturedProjects } from "@/data/portfolio";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -162,18 +163,27 @@ const Index = () => {
               </p>
             </ScrollReveal>
             <ScrollReveal direction="right">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {[
-                  { val: "IPD", label: t("home.philosophy.ipd") },
-                  { val: "BIM", label: t("home.philosophy.bim") },
-                  { val: "CP", label: t("home.philosophy.cp") },
-                ].map((item) => (
-                  <div key={item.val} className="py-10 relative">
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-px bg-[#a11d2d]/40" />
-                    <div className="text-3xl md:text-4xl font-light tracking-tight">{item.val}</div>
-                    <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">{item.label}</div>
-                  </div>
-                ))}
+              <div className="space-y-10">
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  {[
+                    { val: "IPD", label: t("home.philosophy.ipd") },
+                    { val: "BIM", label: t("home.philosophy.bim") },
+                    { val: "CP", label: t("home.philosophy.cp") },
+                  ].map((item) => (
+                    <div key={item.val} className="py-10 relative">
+                      <span className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-px bg-[#a11d2d]/40" />
+                      <div className="text-3xl md:text-4xl font-light tracking-tight">{item.val}</div>
+                      <div className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground mt-3 font-normal">{item.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-center pt-2">
+                  <img
+                    src={chbaAward}
+                    alt="CHBA National Awards for Housing Excellence"
+                    className="h-28 md:h-32 w-auto object-contain opacity-75"
+                  />
+                </div>
               </div>
             </ScrollReveal>
           </div>
