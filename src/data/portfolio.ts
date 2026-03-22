@@ -24,6 +24,18 @@ import fiftyFourthAveCondo01 from "@/assets/54th_ave_condo-01.jpg";
 import fiftyFourthAveCondo02 from "@/assets/54th_ave_condo-02.jpg";
 import fiftyFourthAveCondo03 from "@/assets/54th_ave_condo-03.jpg";
 
+// New batch uploaded project images
+import collingwood01 from "@/assets/collingwood-01.webp";
+import fletcherTownhouses01webp from "@/assets/fletcher_townhouses-01.webp";
+import royalOak01 from "@/assets/royal-oak-01.webp";
+import west3901 from "@/assets/west-39-01.webp";
+import seavale01 from "@/assets/seavale-01.webp";
+import wellingtonMixUse01webp from "@/assets/wellington_mix-use-01.webp";
+import fiftyFourthAveCondo01webp from "@/assets/54th_ave_condo-01.webp";
+import zone5UnionBay01 from "@/assets/zone_5_union_bay_estate-01.webp";
+import newUniversityHospital01 from "@/assets/new_university_hospital-01.webp";
+import dubaiHouseOfFuture01 from "@/assets/dubai_house_of_the_future-01.webp";
+
 export type ProjectCategory =
   | "All"
   | "Residential"
