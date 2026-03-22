@@ -1,8 +1,14 @@
-// Source project images (legacy)
-import srcProject3 from "@/assets/src-project-3.jpg";
-import srcProject6 from "@/assets/src-project-6.jpg";
-import srcProject9 from "@/assets/src-project-9.jpg";
-import srcProject12 from "@/assets/src-project-12.jpg";
+// New real project images
+import cleardent01 from "@/assets/cleardent-01.webp";
+import lionsTravel01 from "@/assets/lions_travel-01.webp";
+import tecoOffice01 from "@/assets/teco_office-01.webp";
+import titanicExhibition01 from "@/assets/titanic_exhibition-01.webp";
+import east2ndAve01 from "@/assets/east-2nd-ave-01.webp";
+import happyMay01 from "@/assets/happy-may-01.webp";
+import littleMarines01 from "@/assets/little-marines-01.webp";
+import phiEducation01 from "@/assets/phi-education-01.webp";
+import sqnEducation01 from "@/assets/sqn-education-01.webp";
+import torakeJapaneseCuisine01 from "@/assets/torake-japanese-cuisine-01.webp";
 
 // Real uploaded project images
 import austinHighRise01 from "@/assets/austin_high-rise-01.webp";
@@ -408,7 +414,7 @@ export const allProjects: ProjectItem[] = [
     location: "Richmond, BC",
     area: "2,415 sq. ft.",
     budget: "$1 million",
-    image: srcProject9,
+    image: torakeJapaneseCuisine01,
   },
   {
     slug: "torake-japanese-cuisine",
@@ -416,7 +422,7 @@ export const allProjects: ProjectItem[] = [
     category: "Commercial",
     tags: ["Restaurant"],
     location: "Richmond, BC",
-    image: srcProject9,
+    image: torakeJapaneseCuisine01,
   },
   {
     slug: "ramen-one-on-broadway",
@@ -424,7 +430,7 @@ export const allProjects: ProjectItem[] = [
     category: "Commercial",
     tags: ["Restaurant"],
     location: "Vancouver, BC",
-    image: srcProject9,
+    image: torakeJapaneseCuisine01,
   },
   {
     slug: "bridgeport-hotel",
@@ -433,7 +439,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Hotel"],
     location: "Richmond, BC",
     detail: "Design architect: GBL Architects",
-    image: srcProject6,
+    image: torakeJapaneseCuisine01,
   },
 
   // ── INDUSTRIAL ───────────────────────────────────────
@@ -546,7 +552,7 @@ export const allProjects: ProjectItem[] = [
     category: "Institutional",
     tags: ["Daycare", "Education"],
     location: "Vancouver, BC",
-    image: srcProject12,
+    image: east2ndAve01,
   },
   {
     slug: "sqn-education",
@@ -555,8 +561,8 @@ export const allProjects: ProjectItem[] = [
     tags: ["Education"],
     location: "Richmond, BC",
     detail: "Designer: ID Design Consulting Ltd.",
-    image: srcProject12,
-    images: [srcProject12, srcProject3],
+    image: sqnEducation01,
+    images: [sqnEducation01],
     isFeatured: true,
     description: "A purpose-built educational facility in Richmond, designed to create nurturing and stimulating learning environments. The project was developed in collaboration with ID Design Consulting Ltd., with Architect 57 providing code consultation and compliance services.",
     details: [
@@ -572,7 +578,7 @@ export const allProjects: ProjectItem[] = [
     category: "Institutional",
     tags: ["Education"],
     location: "Vancouver, BC",
-    image: srcProject3,
+    image: phiEducation01,
   },
   {
     slug: "little-marines-preschool",
@@ -581,7 +587,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Preschool"],
     location: "Coquitlam, BC",
     detail: "Designer: Yan Design Studio",
-    image: srcProject6,
+    image: littleMarines01,
   },
   {
     slug: "happy-may-iv",
@@ -589,7 +595,7 @@ export const allProjects: ProjectItem[] = [
     category: "Institutional",
     tags: ["Daycare"],
     location: "Richmond, BC",
-    image: srcProject9,
+    image: happyMay01,
   },
   {
     slug: "katalin-care-homes",
@@ -729,7 +735,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Retail"],
     location: "Richmond, BC",
     area: "11,639 sq. ft.",
-    image: srcProject6,
+    image: east2ndAve01,
   },
   {
     slug: "titanic-exhibition",
@@ -738,7 +744,7 @@ export const allProjects: ProjectItem[] = [
     tags: ["Exhibition"],
     location: "Richmond, BC",
     area: "15,801 sq. ft.",
-    image: srcProject3,
+    image: titanicExhibition01,
   },
   {
     slug: "beresford-doctor-clinic",
@@ -762,7 +768,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Office"],
     location: "Downtown Vancouver, BC",
-    image: srcProject12,
+    image: tecoOffice01,
   },
   {
     slug: "triple-a-commercial",
@@ -770,7 +776,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Commercial Interior"],
     area: "12,339 sq. ft.",
-    image: srcProject6,
+    image: tecoOffice01,
   },
   {
     slug: "cleardent",
@@ -778,7 +784,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Dental"],
     location: "Burnaby, BC",
-    image: srcProject3,
+    image: cleardent01,
   },
   {
     slug: "lions-travel",
@@ -786,7 +792,7 @@ export const allProjects: ProjectItem[] = [
     category: "Interior Projects",
     tags: ["Office"],
     location: "Burnaby, BC",
-    image: srcProject6,
+    image: lionsTravel01,
   },
   {
     slug: "adore",
