@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageMeta from "@/components/PageMeta";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 import {
